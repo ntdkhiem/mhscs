@@ -35,17 +35,16 @@ Created:
 /*  Font Family and Colors Styles
 /* =================================== */
 
-$primary-font	: 'Poppins', sans-serif;
+$primary-font: "Poppins", sans-serif;
 
+$primary-color: #f7631b;
+$title-color: #222222;
+$text-color: #777777;
 
-$primary-color	: #f7631b;
-$title-color	: #222222;
-$text-color		: #777777;
-
-$white			: #fff;
-$offwhite		: #f9f9ff;
-$black			: #222;
-
+$white: #fff;
+$offwhite: #f9f9ff;
+$black: #222;
+$event-color: rgba(247, 99, 27, 0.8);
 
 /*
 
@@ -61,4 +60,3 @@ $offwhite		: #f9f9ff;
 $black			: #222;
 
 */
-

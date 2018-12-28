@@ -2,121 +2,179 @@
 /*  Events Page Styles
 /* =================================== */
 
+.event-page-lists {
+  .single-carusel {
+    margin-bottom: 50px;
+  }
 
-.event-page-lists{
-    .single-carusel{
-        margin-bottom: 50px;
+  .primary-btn {
+    border: 1px solid transparent;
+    &:hover {
+      color: $primary-color;
+      border-color: $primary-color;
+      background: transparent;
     }
-
-    .primary-btn{
-        border: 1px solid transparent;
-        &:hover{
-            color:$primary-color;
-            border-color:$primary-color;
-            background: transparent;
-        }
-    }
+  }
 }
 
-
-
-.event-details-area{
-    .details-content{
-        h4{
-            margin:20px 0px;
-        }
+.event-details-area {
+  .details-content {
+    h4 {
+      margin: 20px 0px;
     }
-    .social-nav{
-        padding-top:50px;
-        .focials{
-            li{
-                text-align: right;  
-                display: inline-block;   
-                a{
-                    color: #fff;
-                    .fa-facebook{
-                        width: 30px;
-                        display: block;
-                        text-align: center;
-                        padding: 8px 0px;                        
-                        background:#4b6eaa;
-                    }
-                    .fa-twitter{
-                        width: 30px;
-                        display: block;
-                        text-align: center;
-                        padding: 8px 0px;                        
-                        background:#00c7f8;
-                    }  
-                    .fa-dribbble{
-                        width: 30px;
-                        display: block;
-                        text-align: center;
-                        padding: 8px 0px;                        
-                        background:#f982aa;
-                    }
-                    .fa-behance{
-                        width: 30px;
-                        display: block;
-                        text-align: center;
-                        padding: 8px 0px;                        
-                        background:#0b8eff;
-                    }                                                          
-                }
-            }
+  }
+  .social-nav {
+    padding-top: 50px;
+    .focials {
+      li {
+        text-align: right;
+        display: inline-block;
+        a {
+          color: #fff;
+          .fa-facebook {
+            width: 30px;
+            display: block;
+            text-align: center;
+            padding: 8px 0px;
+            background: #4b6eaa;
+          }
+          .fa-twitter {
+            width: 30px;
+            display: block;
+            text-align: center;
+            padding: 8px 0px;
+            background: #00c7f8;
+          }
+          .fa-dribbble {
+            width: 30px;
+            display: block;
+            text-align: center;
+            padding: 8px 0px;
+            background: #f982aa;
+          }
+          .fa-behance {
+            width: 30px;
+            display: block;
+            text-align: center;
+            padding: 8px 0px;
+            background: #0b8eff;
+          }
         }
-        .navs{
-            text-align:right;
-            a{
-                background:$offwhite;
-                color:$black;
-                padding:10px 25px;
-                @include transition();
-                font-size: 14px;
-                @media(max-width:414px){
-                    font-size:12px;
-                }
-                font-weight: 300;
-                text-transform: uppercase;
-                &:hover{
-                    background:$primary-color;
-                    color:$white;
-                }
-            }
-
-            .nav-prev .lnr{
-                margin-right: 5px;
-            }
-            .nav-next .lnr{
-                margin-left: 5px;
-            }
-            @media(max-width:767px){
-                margin-top:30px; 
-                text-align:left;
-            }            
-        }
+      }
     }
+    .navs {
+      text-align: right;
+      a {
+        background: $offwhite;
+        color: $black;
+        padding: 10px 25px;
+        @include transition();
+        font-size: 14px;
+        @media (max-width: 414px) {
+          font-size: 12px;
+        }
+        font-weight: 300;
+        text-transform: uppercase;
+        &:hover {
+          background: $primary-color;
+          color: $white;
+        }
+      }
 
-    .event-details-right{
-        @media(max-width: 991px){
-            margin-top:30px;
-        }
-        .single-event-details{
-            background:#f9f9ff;
-            padding:30px;
-            margin-bottom:30px;
-            ul{
-                li{
-                    font-size:14px;
-                    border-bottom:1px solid #eee;
-                    padding:5px 0px; 
-                    &:last-child{
-                        border-bottom:none;
-                    }
-                }
-            }
-        }
+      .nav-prev .lnr {
+        margin-right: 5px;
+      }
+      .nav-next .lnr {
+        margin-left: 5px;
+      }
+      @media (max-width: 767px) {
+        margin-top: 30px;
+        text-align: left;
+      }
     }
+  }
 
+  .event-details-right {
+    @media (max-width: 991px) {
+      margin-top: 30px;
+    }
+    .single-event-details {
+      background: #f9f9ff;
+      padding: 30px;
+      margin-bottom: 30px;
+      ul {
+        li {
+          font-size: 14px;
+          border-bottom: 1px solid #eee;
+          padding: 5px 0px;
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+}
 
+//------ calendar area ------
+.calendar-area {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  .rbc-toolbar {
+    button {
+      border-color: $primary-color;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      &:hover,
+      &:active {
+        background-color: $primary-color;
+        border-color: $primary-color;
+        color: $white;
+      }
+    }
+  }
+  .rbc-active {
+    background-color: $primary-color !important;
+    color: $white;
+    &:active {
+      background-color: $primary-color !important;
+      color: $white;
+    }
+  }
+  .rbc-header {
+    padding: 10px 3px;
+  }
+  .rbc-day-bg {
+  }
+  .rbc-today {
+    background-color: $text-color;
+  }
+  .rbc-event {
+    background-color: $event-color;
+  }
+  .rbc-agenda-view {
+    .rbc-agenda-table {
+      padding: 10px 3px;
+    }
+    table.rbc-agenda-table tbody > tr > td {
+      text-align: center;
+    }
+  }
+  .rbc-agenda-time-cell {
+    padding: none;
+    color: $white;
+    .rbc-continues-after {
+      padding: 5px 6px;
+      background-color: $success;
+    }
+    .rbc-continues-prior {
+      padding: 5px 6px;
+      background-color: $danger;
+    }
+  }
+  .rbc-now {
+    a {
+      color: $white;
+    }
+  }
 }

@@ -1,12 +1,10 @@
 import React from "react"
 import Feature from "../components/feature"
 import Goal from "../components/goal"
-import Tracks from "../components/tracks"
+import TracksList from "../components/tracks"
 import Events from "../components/events"
-import Slack from "../components/slack"
-import Footer from "../components/footer"
 
-function App() {
+const Home = () => {
   return (
     <React.Fragment>
       {/* <!-- start banner Area --> */}
@@ -26,7 +24,7 @@ function App() {
                   Excepturi error illo numquam voluptas sapiente tempora ducimus
                   totam eius neque atque?
                 </p>
-                <a href="!#" className="primary-btn text-uppercase">
+                <a href="#feature" className="primary-btn text-uppercase">
                   Explore More
                 </a>
               </div>
@@ -45,21 +43,12 @@ function App() {
       {/* end our's goal area */}
 
       {/* start tracks area */}
-      <Tracks />
+      <TracksList />
       {/* end tracks area */}
 
       {/* start upcoming-event area */}
       <Events />
       {/* end upcoming-event area */}
-
-      {/* start slack-invitation area */}
-      <Slack />
-      {/* end slack-invitation area */}
-
-      {/* start footer area */}
-      <Footer/>
-      {/* end footer area */}
-
     </React.Fragment>
   )
 }
@@ -68,4 +57,4 @@ let homeStyle = {
   backgroundImage: "url('./assets/img/banner-bg.jpg')",
 }
 
-export default App
+export default Home
