@@ -11,12 +11,6 @@
 # production
 /build
 
-# Python back-end
-/venv
-/__pycache__
-/server
-*.pyc
-
 # misc
 .DS_Store
 .env.local

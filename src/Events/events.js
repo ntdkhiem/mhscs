@@ -2,7 +2,7 @@ import React from "react"
 import Banner from "../components/banner"
 import Container from "../components/container"
 import moment from "moment"
-import { getEvents } from "../containers/gcal"
+import { getEvents } from "../containers/google"
 import "react-big-calendar/lib/css/react-big-calendar.css"
 import BigCalendar from "react-big-calendar"
 // a localizer for BigCalendar

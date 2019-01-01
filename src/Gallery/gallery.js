@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react"
-import { getPhotos } from "../containers/backend"
+import { getPhotos } from "../containers/google"
 import Banner from "../components/banner"
 
 class Gallery extends PureComponent {
@@ -23,28 +23,32 @@ class Gallery extends PureComponent {
         {/* <!-- Start gallery Area --> */}
         <section className="gallery-area section-gap">
           <div className="container text-center">
-            <div className="row">
-              {photos.map(photo => (
-                <div key={photo.id} className="col-lg-4">
-                  <a
-                    href={photo.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="img-gal"
-                  >
-                    <div className="single-imgs relative">
-                      <div className="overlay overlay-bg" />
-                      <div className="relative">
-                        <img
-                          src={photo.thumbNail}
-                          alt=""
-                          className="img-fluid"
-                        />
+            <div className="row justify-content-center">
+              {photos.length !== 0 ? (
+                photos.map(photo => (
+                  <div key={photo.id} className="col-lg-4">
+                    <a
+                      href={photo.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="img-gal"
+                    >
+                      <div className="single-imgs relative">
+                        <div className="overlay overlay-bg" />
+                        <div className="relative">
+                          <img
+                            src={photo.thumbNail}
+                            alt=""
+                            className="img-fluid"
+                          />
+                        </div>
                       </div>
-                    </div>
-                  </a>
-                </div>
-              ))}
+                    </a>
+                  </div>
+                ))
+              ) : (
+                <p className="text-lead">No Images Found...</p>
+              )}
             </div>
             <a href="!#" className="genric-btn primary-border text-uppercase">
               Load more

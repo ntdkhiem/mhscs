@@ -7,20 +7,19 @@ import Tracks from "./Tracks/tracks"
 import Gallery from "./Gallery/gallery"
 import Events from "./Events/events"
 import Contact from "./Contact/contact"
+import TermsService from "./SubPages/termsService"
 import NotFound from "./NotFound/notFound"
 
 // import components to be used below
 import Slack from "./components/slack"
 import Footer from "./components/footer"
 
-import createBrowserHistory from "history/createBrowserHistory"
 import "./scss/main.scss"
 
-const history = createBrowserHistory()
 class App extends Component {
   render() {
     return (
-      <Router history={history}>
+      <Router>
         <Fragment>
           <header id="header">
             <div className="header-top">
@@ -38,7 +37,7 @@ class App extends Component {
                   <div className="col-lg-6 col-sm-6 col-4 header-top-right no-padding">
                     <a href="tel:+953 012 3654 896">
                       <span className="fa fa-phone" />
-                      <span className="text pl-1">+953 012 3654 896</span>
+                      <span className="text">+953 012 3654 896</span>
                     </a>
                     <a href="!#">
                       <span className="fa fa-envelope" />
@@ -88,6 +87,7 @@ class App extends Component {
               <Route path="/gallery" component={Gallery} />
               <Route path="/events" component={Events} />
               <Route path="/contact" component={Contact} />
+              <Route path="/terms" component={TermsService} />
               <Route path="*" component={NotFound} />
             </Switch>
           </section>

@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
 function Footer() {
   return (
@@ -23,10 +24,10 @@ function Footer() {
                   <a href="!#">Members</a>
                 </li>
                 <li>
-                  <a href="!#">Gallery</a>
+                  <Link to="/gallery">Gallery</Link>
                 </li>
                 <li>
-                  <a href="!#">Calendar</a>
+                  <Link to="/calendar">Calendar</Link>
                 </li>
                 <li>
                   <a href="!#">Club's Policy</a>
@@ -80,7 +81,7 @@ function Footer() {
         <div className="footer-bottom row align-items-center justify-content-between">
           <p className="footer-text m-0 col-lg-6 col-md-12">
             Copyright &copy; 2018 All rights reserved{" "}
-            <span className="text-black">
+            <span style={{ color: "rgba(255,255,255,0.2)" }}>
               | This template is made with{" "}
               <i className="fa fa-heart-o" aria-hidden="true" /> by Colorlib
             </span>

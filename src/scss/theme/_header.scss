@@ -2,73 +2,69 @@
 /*  Menu Styles
 /* =================================== */
 
-
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-.header-top{
-  background:#04091e;
+.header-top {
+  background: #04091e;
   font-size: 12px;
-  padding:8px;
-  a{
-    color:#fff;
+  padding: 8px;
+  a {
+    color: #fff;
   }
-  ul li{
-    display:inline-block;
+  ul li {
+    display: inline-block;
     margin-left: 15px;
   }
 
-
-  .header-top-left{
-    text-align:left;
-    i{
+  .header-top-left {
+    text-align: left;
+    i {
       @include transition();
     }
-    a{
-      margin-right:10px;
+    a {
+      margin-right: 10px;
     }
-    a:hover{
+    a:hover {
       @include transition();
-      i{
-        color:$primary-color;
+      i {
+        color: $primary-color;
       }
     }
   }
 
-  .header-top-right{
+  .header-top-right {
     text-align: right;
-    a{
-        margin-right:10px;
-      .lnr{
-        display:none;
-        font-weight:700;
-      }
-    }
-  
-    @media(max-width:480px){
-      a{
-        .lnr{
-          display:inline-block;
-        }
-        .text{
-          display:none;
-        }
+    a {
+      margin-right: 10px;
+      .lnr {
+        display: none;
+        font-weight: 700;
       }
     }
 
+    @media (max-width: 768px) {
+      a {
+        .lnr {
+          display: inline-block;
+        }
+        .text {
+          display: none;
+        }
+      }
+    }
   }
-
 }
 
-.top-head-btn{
-  background:$primary-color;
-  padding:9px 26px;
+.top-head-btn {
+  background: $primary-color;
+  padding: 9px 26px;
 }
 
-.main-menu{
-  padding-bottom:20px ;
-  padding-top:20px ;
-  border-bottom:1px solid #39353e;
+.main-menu {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  border-bottom: 1px solid #39353e;
 }
 
 #header {
@@ -82,15 +78,15 @@
 
 #header.header-scrolled {
   transition: all 0.5s;
-  background-color: rgba(#04091e,.9);
-  .main-menu{
-    border-color:transparent;
+  background-color: rgba(#04091e, 0.9);
+  .main-menu {
+    border-color: transparent;
   }
 }
 
-@media(max-width:673px){
-  #logo{
-      margin-left:20px;
+@media (max-width: 673px) {
+  #logo {
+    margin-left: 20px;
   }
 }
 
@@ -103,7 +99,8 @@
   letter-spacing: 3px;
 }
 
-#header #logo h1 a, #header #logo h1 a:hover {
+#header #logo h1 a,
+#header #logo h1 a:hover {
   color: #000;
   padding-left: 10px;
   border-left: 4px solid $primary-color;
@@ -123,12 +120,12 @@
   }
 }
 
-
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Nav Menu Essentials */
-.nav-menu, .nav-menu * {
+.nav-menu,
+.nav-menu * {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -197,13 +194,13 @@
   text-decoration: none;
   display: inline-block;
   color: $white;
-  font-weight:500;  
+  font-weight: 500;
   font-size: 12px;
   text-transform: uppercase;
   outline: none;
 }
 
-.nav-menu li:hover > a{
+.nav-menu li:hover > a {
   color: $primary-color;
 }
 
@@ -217,8 +214,6 @@
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   background: #fff;
 }
-
-
 
 .nav-menu ul li {
   transition: 0.3s;
@@ -239,7 +234,7 @@
 
 .nav-menu ul ul {
   margin-right: 10px;
-  margin-top:0;
+  margin-top: 0;
 }
 
 /* Mobile Nav Toggle */
@@ -259,15 +254,15 @@
 
 #mobile-nav-toggle i {
   color: $white;
-  font-weight: 900;  
+  font-weight: 900;
 }
 
 @media (max-width: 960px) {
   #mobile-nav-toggle {
     display: inline;
   }
-  #nav-menu-container{
-    display:none;
+  #nav-menu-container {
+    display: none;
   }
 }
 
@@ -361,5 +356,3 @@ body.mobile-nav-active #mobile-nav {
 body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
 }
-
-
