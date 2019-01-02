@@ -23,4 +23,5 @@ yarn-error.log*
 
 # non-important
 /.vscode
+/.netlify
 desktop.ini
