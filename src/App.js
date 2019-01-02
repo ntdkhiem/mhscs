@@ -50,9 +50,9 @@ class App extends Component {
             <div className="container main-menu">
               <div className="row align-items-center justify-content-between d-flex">
                 <div className="logo">
-                  <Link to="/">
+                  <a href="/">
                     <img src="/assets/img/icon.png" alt="logo" />
-                  </Link>
+                  </a>
                 </div>
                 <nav id="nav-menu-container">
                   <ul className="nav-menu">

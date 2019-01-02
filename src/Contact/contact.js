@@ -11,7 +11,6 @@ const Contact = () => {
       {/* start contact area */}
       <section className="contact-page-area section-gap">
         <div className="container">
-          <h4>Contact currently unavailable</h4>
           <div className="row">
             <div className="col-lg-4 d-flex flex-column address-wrap">
               <div className="single-contact-address d-flex flex-row">
@@ -94,6 +93,7 @@ const Contact = () => {
               </form>
             </div>
           </div>
+          <h4 className="text-center">Contact currently unavailable</h4>
         </div>
       </section>
       {/* end contact area */}

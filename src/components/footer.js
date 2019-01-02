@@ -33,7 +33,7 @@ function Footer() {
                   <a href="!#">Club's Policy</a>
                 </li>
                 <li>
-                  <a href="!#">Terms of Service</a>
+                  <Link to="/terms">Terms of Service</Link>
                 </li>
               </ul>
             </div>
@@ -82,8 +82,7 @@ function Footer() {
           <p className="footer-text m-0 col-lg-6 col-md-12">
             Copyright &copy; 2018 All rights reserved{" "}
             <span style={{ color: "rgba(255,255,255,0.2)" }}>
-              | This template is made with{" "}
-              <i className="fa fa-heart-o" aria-hidden="true" /> by Colorlib
+              | template by Colorlib
             </span>
           </p>
           <div className="col-lg-6 col-sm-12 footer-social">
