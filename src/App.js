@@ -11,8 +11,8 @@ import TermsService from "./SubPages/termsService"
 import NotFound from "./NotFound/notFound"
 
 // import components to be used below
-import Slack from "./components/slack"
-import Footer from "./components/footer"
+import Slack from "./components/Slack"
+import Footer from "./components/Footer"
 
 import "./scss/main.scss"
 

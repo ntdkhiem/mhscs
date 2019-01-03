@@ -1,6 +1,6 @@
 import React from "react"
 import Banner from "../components/banner"
-import Feature from "../components/feature"
+import Feature from "../components/Feature"
 import Goal from "../components/goal"
 import Container from "../components/container"
 import Carusel from "../components/carusel"

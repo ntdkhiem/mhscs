@@ -1,5 +1,5 @@
 import React from "react"
-import Feature from "../components/feature"
+import Feature from "../components/Feature"
 import Goal from "../components/goal"
 import TracksList from "../components/tracks"
 import Events from "../components/events"
