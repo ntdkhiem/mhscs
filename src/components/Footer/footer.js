@@ -1,6 +1,8 @@
 import React from "react"
 import { Link } from "react-router-dom"
 
+import ContactForm from "../Forms/contact"
+
 /**
  * @render react
  * @name Footer
@@ -50,39 +52,7 @@ const Footer = () => {
             <div className="single-footer-widget">
               <h4>Feedback</h4>
               <p>Send us some feedback.</p>
-              <form action="#">
-                <div className="mt-10">
-                  <input
-                    type="text"
-                    name="Name"
-                    placeholder="Name"
-                    className="single-input"
-                    required
-                  />
-                </div>
-                <div className="mt-10">
-                  <input
-                    type="email"
-                    name="Email"
-                    placeholder="Email"
-                    className="single-input"
-                    required
-                  />
-                </div>
-                <div className="mt-10">
-                  <textarea
-                    placeholder="Message"
-                    className="single-textarea"
-                    required
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="genric-btn primary mt-10 btn-block"
-                >
-                  Submit <i className="fa fa-arrow-right ml-2" />
-                </button>
-              </form>
+              <ContactForm />
             </div>
           </div>
         </div>
