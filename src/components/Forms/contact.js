@@ -1,9 +1,9 @@
 import React, { Component } from "react"
 
-const encode = (data) => {
+const encode = data => {
   return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
 }
 
 export default class ContactForm extends Component {
@@ -22,15 +22,16 @@ export default class ContactForm extends Component {
     isSubmited: false,
   }
 
-  handleChange = e => this.setState({ [e.target.name]: e.target.value });
-  
+  handleChange = e => this.setState({ [e.target.name]: e.target.value })
+
   handleSubmit = event => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...this.state })
-    }).then(() => alert("Success!"))
-      .catch(error => alert(error));
+      body: encode({ "form-name": "contact", ...this.state }),
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error))
 
     event.preventDefault()
     this.setState({ isSubmited: true })
@@ -39,6 +40,7 @@ export default class ContactForm extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
+        <input type="hidden" name="form-name" value="contact" />
         <div className="mt-10">
           <input
             type="text"
