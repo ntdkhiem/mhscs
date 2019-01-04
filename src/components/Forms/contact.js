@@ -8,32 +8,22 @@ const encode = data => {
 
 export default class ContactForm extends Component {
   state = {
-    form: {
-      name: {
-        value: "",
-      },
-      email: {
-        value: "",
-      },
-      message: {
-        value: "",
-      },
-    },
+    form: {},
     isSubmited: false,
   }
 
-  handleChange = event => {
-    const name = event.target.name
-    const value = event.target.value
+  onInputChange = event => {
+    const fields = this.state.form
+    const newFields = {}
+    newFields[event.target.name] = event.target.value
 
     this.setState({
-      form: {
-        [name]: value,
-      },
+      form: { ...fields, ...newFields },
     })
   }
 
   handleSubmit = event => {
+    event.preventDefault()
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -41,7 +31,6 @@ export default class ContactForm extends Component {
     })
       .then(() => alert("Success!"))
       .catch(error => alert(error))
-    event.preventDefault()
     this.setState({ isSubmited: true })
   }
 
@@ -54,8 +43,8 @@ export default class ContactForm extends Component {
             name="name"
             placeholder="name"
             className="single-input"
-            value={this.state.form.name.value} // value is undefined after render
-            onChange={this.handleChange}
+            value={this.state.form.name || ""} // value is undefined after render
+            onChange={this.onInputChange}
           />
         </div>
         <div className="mt-10">
@@ -64,8 +53,8 @@ export default class ContactForm extends Component {
             name="email"
             placeholder="email"
             className="single-input"
-            value={this.state.form.email.value}
-            onChange={this.handleChange}
+            value={this.state.form.email || ""}
+            onChange={this.onInputChange}
           />
         </div>
         <div className="mt-10">
@@ -73,8 +62,8 @@ export default class ContactForm extends Component {
             name="message"
             placeholder="Message"
             className="single-textarea"
-            value={this.state.form.message.value}
-            onChange={this.handleChange}
+            value={this.state.form.message || ""}
+            onChange={this.onInputChange}
           />
         </div>
         <button type="submit" className="genric-btn primary mt-10 btn-block">
