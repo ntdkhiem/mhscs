@@ -19,7 +19,6 @@ describe("ContactForm", () => {
     const wrapper = mountContact()
     const inputs = wrapper.find("input")
     const textarea = wrapper.find("textarea")
-    console.log(inputs)
     expect(inputs).toHaveLength(2)
     expect(textarea).toHaveLength(1)
   })
