@@ -1,9 +1,9 @@
 import React, { Component } from "react"
 
-const encode = (data) => {
+const encode = data => {
   return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
 }
 
 export default class ContactForm extends Component {
@@ -22,16 +22,25 @@ export default class ContactForm extends Component {
     isSubmited: false,
   }
 
-  handleChange = e => this.setState({ [e.target.name]: e.target.value });
-  
+  handleChange = event => {
+    const name = event.target.name
+    const value = event.target.value
+
+    this.setState({
+      form: {
+        [name]: value,
+      },
+    })
+  }
+
   handleSubmit = event => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...this.state })
-    }).then(() => alert("Success!"))
-      .catch(error => alert(error));
-
+      body: encode({ "form-name": "contact", ...this.state }),
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error))
     event.preventDefault()
     this.setState({ isSubmited: true })
   }
@@ -44,7 +53,8 @@ export default class ContactForm extends Component {
             type="text"
             name="name"
             placeholder="name"
-            value={this.state.form.name.value}
+            className="single-input"
+            value={this.state.form.name.value} // value is undefined after render
             onChange={this.handleChange}
           />
         </div>
@@ -53,6 +63,7 @@ export default class ContactForm extends Component {
             type="email"
             name="email"
             placeholder="email"
+            className="single-input"
             value={this.state.form.email.value}
             onChange={this.handleChange}
           />
