@@ -1,5 +1,11 @@
 import React, { Component } from "react"
 
+const encode = (data) => {
+  return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+}
+
 export default class ContactForm extends Component {
   state = {
     form: {
@@ -16,25 +22,23 @@ export default class ContactForm extends Component {
     isSubmited: false,
   }
 
-  handleChange = event => {
-    const name = event.target.name
-    const value = event.target.value
-
-    this.setState({
-      form: {
-        [name]: value,
-      },
-    })
-  }
-
+  handleChange = e => this.setState({ [e.target.name]: e.target.value });
+  
   handleSubmit = event => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...this.state })
+    }).then(() => alert("Success!"))
+      .catch(error => alert(error));
+
     event.preventDefault()
     this.setState({ isSubmited: true })
   }
 
   render() {
     return (
-      <form name="contact" method="POST" onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit}>
         <div className="mt-10">
           <input
             type="text"
