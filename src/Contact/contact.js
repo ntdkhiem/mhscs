@@ -1,5 +1,6 @@
 import React from "react"
 import Banner from "../components/banner"
+import ContactForm from "../components/Forms/contact"
 
 const Contact = () => {
   return (
@@ -44,53 +45,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="col-lg-8">
-              <form className="form-area contact-form text-right" id="myForm">
-                <div className="row">
-                  <div className="col-lg-6 form-group">
-                    <input
-                      name="name"
-                      placeholder="Enter your name"
-                      className="common-input mb-20 form-control"
-                      required
-                      type="text"
-                    />
-
-                    <input
-                      name="email"
-                      placeholder="Enter email address"
-                      pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
-                      className="common-input mb-20 form-control"
-                      required
-                      type="email"
-                    />
-
-                    <input
-                      name="subject"
-                      placeholder="Enter subject"
-                      className="common-input mb-20 form-control"
-                      required
-                      type="text"
-                    />
-                  </div>
-                  <div className="col-lg-6 form-group">
-                    <textarea
-                      className="common-textarea form-control"
-                      name="message"
-                      placeholder="Enter Messege"
-                      required
-                    />
-                  </div>
-                  <div className="col-lg-12">
-                    <div className="alert-msg" style={{ textAlign: "left" }} />
-                    <button
-                      className="genric-btn primary"
-                      style={{ float: "right" }}
-                    >
-                      Send Message
-                    </button>
-                  </div>
-                </div>
-              </form>
+              <ContactForm />
             </div>
           </div>
           <h4 className="text-center">Contact currently unavailable</h4>
