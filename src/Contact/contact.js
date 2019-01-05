@@ -48,7 +48,6 @@ const Contact = () => {
               <ContactForm />
             </div>
           </div>
-          <h4 className="text-center">Contact currently unavailable</h4>
         </div>
       </section>
       {/* end contact area */}
