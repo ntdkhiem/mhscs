@@ -100,7 +100,7 @@ export default class ContactForm extends PureComponent {
     return (
       <React.Fragment>
         {isSubmited ? (
-          <p className="text-center text-white">Thanks For Your Submission</p>
+          <p className="text-center">Thanks For Your Submission</p>
         ) : (
           <Form Submitted={this.Submitted} />
         )}
