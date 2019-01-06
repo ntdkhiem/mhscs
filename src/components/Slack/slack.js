@@ -7,12 +7,11 @@ import React from "react"
  * @example
  * <Slack />
  */
-
 const Slack = () => {
   return (
     <section className="cta-two-area">
       <div className="container text-center">
-        <a href="!#">
+        <a href="#">
           <img
             className="img-fluid"
             src="/assets/img/slack.png"
