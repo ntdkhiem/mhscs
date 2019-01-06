@@ -4,9 +4,8 @@ import $ from "jquery"
 const CALENDAR_ID = "0gvfrnaahon9k8csfuq6n44uq0@group.calendar.google.com"
 const PHOTOS_FOLDER_ID = "1khIzqhcnCLTEVv7tTxHiVBdhWM74mY7V"
 const API_KEY = "AIzaSyBz7ooxpS0fB7q5XZLCrsQR_vON7LXzHG0"
-const TEST_API_KEY = "AIzaSyAc3w3Pul9ZlJvs9zgIZB0A0rNnqhYRQ1U"
 var google_calendar_url_params = {
-  key: TEST_API_KEY,
+  key: API_KEY,
   timeMin: new Date().toISOString(),
   fields: "items(start, end, summary, description, htmlLink, id)",
 }
