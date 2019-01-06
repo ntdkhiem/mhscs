@@ -16,20 +16,23 @@ const Goal = props => {
             <div className="col-lg-6 info-area-right">
               <h1>Our Purpose</h1>
               <p>
-                inappropriate behavior is often laughed off as “boys will be
-                boys,” women face higher conduct standards especially in the
-                workplace. That’s why it’s crucial that, as women, our behavior
-                on the job is beyond reproach.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Repudiandae, eos. Soluta numquam iure culpa voluptatum dolore
+                saepe laudantium aliquid accusantium architecto iusto?
+                Obcaecati, optio adipisci ratione voluptatum dolores iusto
+                ducimus natus,
               </p>
               <br />
               <p>
-                inappropriate behavior is often laughed off as “boys will be
-                boys,” women face higher conduct standards especially in the
-                workplace. That’s why it’s crucial that, as women, our behavior
-                on the job is beyond reproach. inappropriate behavior is often
-                laughed off as “boys will be boys,” women face higher conduct
-                standards especially in the workplace. That’s why it’s crucial
-                that, as women, our behavior on the job is beyond reproach.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Repudiandae, eos. Soluta numquam iure culpa voluptatum dolore
+                saepe laudantium aliquid accusantium architecto iusto?
+                Obcaecati, optio adipisci ratione voluptatum dolores iusto
+                ducimus natus, Lorem, ipsum dolor sit amet consectetur
+                adipisicing elit. Repudiandae, eos. Soluta numquam iure culpa
+                voluptatum dolore saepe laudantium aliquid accusantium
+                architecto iusto? Obcaecati, optio adipisci ratione voluptatum
+                dolores iusto ducimus natus,
               </p>
             </div>
           </div>
