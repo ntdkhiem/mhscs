@@ -2,6 +2,11 @@
 /*  Homepage Styles
 /* =================================== */
 
+.event-card {
+  border: none;
+  background-color: rgba($primary-color, 0.05);
+}
+
 .section-gap {
   padding: 120px 0;
 }
@@ -279,7 +284,79 @@
 
 /*-------- End popular-course Area ------------*/
 
+/*-------- Start search-course Area ------------*/
+
+.search-course-area {
+  background: url(/assets/img/s-bg.jpg) center;
+  background-size: cover;
+  .overlay-bg {
+    background: rgba(#04091e, 0.8);
+  }
+  .search-course-left {
+    h1 {
+      margin-bottom: 20px;
+      @media (max-width: 991px) {
+        font-size: 30px;
+      }
+    }
+    p {
+      font-size: 12px;
+    }
+    @media (max-width: 991px) {
+      padding-top: 120px;
+      margin-bottom: 40px;
+    }
+  }
+  .search-course-right {
+    background: rgba(#fff, 0.1);
+  }
+  .details-content {
+    margin-top: 50px;
+    .single-detials {
+      span {
+        color: $primary-color;
+        font-size: 30px;
+      }
+      h4 {
+        margin: 20px 0px;
+        color: $white;
+      }
+      p {
+        margin-bottom: 0px;
+      }
+      @media (max-width: 991px) and (min-width: 768px) {
+        h4 {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+/*-------- End search-course Area ------------*/
+
 /*-------- Start Cta area Style   -------------*/
+
+.cta-one-area {
+  background: url(/assets/img/cta-bg.jpg) center;
+  background-size: cover;
+  text-align: center;
+  color: $white;
+  h1,
+  p {
+    position: relative;
+  }
+  p {
+    max-width: 670px;
+    margin: 20px 0px;
+    @media (max-width: 576px) {
+      padding: 0% 5%;
+    }
+  }
+  .overlay-bg {
+    background: rgba(#04091e, 0.5);
+  }
+}
 
 .cta-two-area {
   background: $primary-color;
@@ -301,6 +378,63 @@
 }
 
 /*-------- End Cta area Style   -------------*/
+
+/*-------- Start review Area -------------*/
+
+.review-area {
+  background: $offwhite;
+  h4 {
+    color: $black;
+  }
+
+  .owl-carousel .owl-item img {
+    width: auto !important;
+  }
+
+  .owl-dots {
+    text-align: center;
+    bottom: 5px;
+    margin-top: 20px;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .owl-dot {
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    background: rgba(127, 127, 127, 0.5);
+    margin-left: 5px;
+    margin-right: 5px;
+    @include transition();
+  }
+
+  .owl-dot.active {
+    @include transition;
+    background: $primary-color;
+  }
+}
+
+.single-review {
+  .title {
+    margin: 20px 0;
+  }
+  .star {
+    margin-left: 30px;
+    .checked {
+      color: orange;
+    }
+  }
+
+  @media (max-width: 414px) {
+    padding: 15px;
+  }
+}
+
+/*-------- End review Area -------------*/
 
 /*-------- Start Common Page Style   -------------*/
 
