@@ -31,13 +31,13 @@ class Events extends PureComponent {
       <Container
         title="Upcoming Events of our Club"
         desc="If you are a serious astronomy fanatic like a lot of us"
-        classes="upcoming-event-area pb-120"
+        classes="upcoming-event-area pb-120 mt-100 mb-50"
       >
         <div className="row justify-content-center">
           {events.length !== 0 ? (
-            events.map((event, index) => (
-              <div className="col-lg-10">
-                <div key={index} className="card border-primary mt-3">
+            events.map(event => (
+              <div key={event.id} className="col-lg-5">
+                <div className="card event-card mt-3 p-4">
                   <div className="card-body">
                     <h5 className="card-title">{event.title}</h5>
                     <h6 className="card-subtitle mb-2 text-muted">
@@ -49,14 +49,10 @@ class Events extends PureComponent {
                     </h6>
                     <p className="card-text">{event.description}</p>
                     <a
-                      href="!#"
-                      className="card-link genric-btn default circle arrow"
-                    >
-                      Remind me
-                    </a>
-                    <a
-                      href="!#"
+                      href={event.link}
                       className="card-link genric-btn primary-border"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Subscribe
                     </a>
