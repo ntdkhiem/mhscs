@@ -5,6 +5,8 @@ import Goal from "../components/goal"
 import Container from "../components/container"
 import Carusel from "../components/carusel"
 import Card from "../components/card"
+import MemberCTA from "../components/memberCTA"
+import Review from "../components/review"
 
 const About = () => {
   return (
@@ -253,6 +255,14 @@ const About = () => {
         </div>
       </Container>
       {/* end officers area */}
+
+      {/* start member CTA area */}
+      <MemberCTA />
+      {/* end member CTA area */}
+
+      {/* start review area */}
+      <Review />
+      {/* end review area */}
     </React.Fragment>
   )
 }

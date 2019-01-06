@@ -3,6 +3,8 @@ import Feature from "../components/Feature"
 import Goal from "../components/goal"
 import TracksList from "../components/tracks"
 import Events from "../components/events"
+import MemberCTA from "../components/memberCTA"
+import Review from "../components/review"
 
 const Home = () => {
   return (
@@ -46,9 +48,59 @@ const Home = () => {
       <TracksList />
       {/* end tracks area */}
 
+      {/* <!-- Start search-course Area --> */}
+      <section className="search-course-area relative pt-80 pb-80">
+        <div className="overlay overlay-bg" />
+        <div className="container">
+          <div className="row justify-content-between align-items-center">
+            <div className="col-lg-6 col-md-6 search-course-left">
+              <h1 className="text-white">Who should join us</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+                officia quis, repudiandae deserunt possimus neque cum quasi
+                vitae, porro nesciunt, natus quaerat soluta suscipit. Nostrum
+                facilis quaerat placeat nam nesciunt!
+              </p>
+              <div className="row details-content">
+                <div className="col single-detials">
+                  <span className="lnr lnr-graduation-hat" />
+                  <h4>Curiosity Require</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quia, sint?
+                  </p>
+                </div>
+                <div className="col single-detials">
+                  <span className="lnr lnr-license" />
+                  <h4>Self Teach</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aliquid illum rerum consequuntur.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6 search-course-right section-gap">
+              <div className="container text-center">
+                <h4 className="text-white">Club's Rules here</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* <!-- End search-course Area --> */}
+
       {/* start upcoming-event area */}
       <Events />
       {/* end upcoming-event area */}
+
+      {/* start member CTA area */}
+      <MemberCTA />
+      {/* end member CTA area */}
+
+      {/* start review area */}
+      <Review />
+      {/* end review area */}
     </React.Fragment>
   )
 }
