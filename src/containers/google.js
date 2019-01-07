@@ -15,7 +15,9 @@ let google_calendar_url =
 
 var google_drive_url_params = {
   key: API_KEY,
+  orderBy: "createdTime desc",
   q: `"${PHOTOS_FOLDER_ID}" in parents`,
+  pageSize: "6",
   fields: "nextPageToken, files(id)",
 }
 let google_drive_url =
@@ -44,7 +46,10 @@ export function getEvents(callback, _maxResults = null) {
   })
 }
 
-export function getPhotos(callback) {
+export function getPhotos(callback, _token = "") {
+  if (_token !== "") {
+    google_drive_url += _token
+  }
   request.get(`${google_drive_url}`).end((err, resp) => {
     if (!err) {
       const photos = []
@@ -55,6 +60,7 @@ export function getPhotos(callback) {
           link: `//drive.google.com/open?id=${file.id}`,
         })
       })
+      photos.push(JSON.parse(resp.text).nextPageToken)
       callback(photos)
     }
   })
