@@ -14,17 +14,6 @@ class Events extends PureComponent {
     })
   }
 
-  performCounting = datetime => {
-    let time = moment(datetime)
-    if (time.isValid()) {
-      setInterval(function() {
-        console.log(time.format("HH:MM:SS"))
-      }, 1000)
-    } else {
-      console.log(time.format("MM/DD/YYYY - HH:MM"))
-    }
-  }
-
   render() {
     const { events } = this.state
     return (
