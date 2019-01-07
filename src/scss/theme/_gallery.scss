@@ -2,23 +2,9 @@
 /*  Gallery Page Styles
 /* =================================== */
 
-
-.gallery-area{
-    .single-imgs{
-        margin-bottom:30px;
-        img{
-            width:100%;
-        }
-        .overlay-bg{
-            background: rgba($primary-color,.85);
-            opacity: 0;
-            @include transition();
-            z-index: 2;
-        }
-        &:hover{
-            .overlay-bg{
-                opacity:1;
-            }
-        }
-    }
+.gallery-area {
+  .image-card {
+    border: 1px solid $primary;
+    width: 103.3%;
+  }
 }
