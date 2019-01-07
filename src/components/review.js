@@ -9,7 +9,7 @@ const Review = () => {
 						<div className="active-review-carusel">
 							<div className="single-review item">
 								<div className="title justify-content-start d-flex">
-									<a href="#"><h4>Fannie Rowe</h4></a>
+									<h4>Fannie Rowe</h4>
 									<div className="star">
 										<span className="fa fa-star checked"></span>
 										<span className="fa fa-star checked"></span>
@@ -24,7 +24,7 @@ const Review = () => {
 							</div>
 							<div className="single-review item">
 								<div className="title justify-content-start d-flex">
-									<a href="#"><h4>Hulda Sutton</h4></a>
+									<h4>Hulda Sutton</h4>
 									<div className="star">
 										<span className="fa fa-star checked"></span>
 										<span className="fa fa-star checked"></span>
@@ -39,7 +39,7 @@ const Review = () => {
 							</div>
 							<div className="single-review item">
 								<div className="title justify-content-start d-flex">
-									<a href="#"><h4>Fannie Rowe</h4></a>
+									<h4>Fannie Rowe</h4>
 									<div className="star">
 										<span className="fa fa-star checked"></span>
 										<span className="fa fa-star checked"></span>
@@ -54,7 +54,7 @@ const Review = () => {
 							</div>
 							<div className="single-review item">
 								<div className="title justify-content-start d-flex">
-									<a href="#"><h4>Hulda Sutton</h4></a>
+									<h4>Hulda Sutton</h4>
 									<div className="star">
 										<span className="fa fa-star checked"></span>
 										<span className="fa fa-star checked"></span>
@@ -69,7 +69,7 @@ const Review = () => {
 							</div>	
 							<div className="single-review item">
 								<div className="title justify-content-start d-flex">
-									<a href="#"><h4>Fannie Rowe</h4></a>
+									<h4>Fannie Rowe</h4>
 									<div className="star">
 										<span className="fa fa-star checked"></span>
 										<span className="fa fa-star checked"></span>
@@ -84,7 +84,7 @@ const Review = () => {
 							</div>
 							<div className="single-review item">
 								<div className="title justify-content-start d-flex">
-									<a href="#"><h4>Hulda Sutton</h4></a>
+									<h4>Hulda Sutton</h4>
 									<div className="star">
 										<span className="fa fa-star checked"></span>
 										<span className="fa fa-star checked"></span>
@@ -99,7 +99,7 @@ const Review = () => {
 							</div>
 							<div className="single-review item">
 								<div className="title justify-content-start d-flex">
-									<a href="#"><h4>Fannie Rowe</h4></a>
+									<h4>Fannie Rowe</h4>
 									<div className="star">
 										<span className="fa fa-star checked"></span>
 										<span className="fa fa-star checked"></span>
@@ -114,7 +114,7 @@ const Review = () => {
 							</div>
 							<div className="single-review item">
 								<div className="title justify-content-start d-flex">
-									<a href="#"><h4>Hulda Sutton</h4></a>
+									<h4>Hulda Sutton</h4>
 									<div className="star">
 										<span className="fa fa-star checked"></span>
 										<span className="fa fa-star checked"></span>
