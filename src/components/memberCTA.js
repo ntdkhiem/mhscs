@@ -19,7 +19,7 @@ const MemberCTA = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Apply for the club
+              ENROLL NOW
             </a>
           </div>
         </div>
