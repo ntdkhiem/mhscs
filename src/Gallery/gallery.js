@@ -57,22 +57,21 @@ class Gallery extends PureComponent {
                       <Image src={photo.thumbNail} width={360} height={250} />
                     </a>
                   </div>
-                ))(
-                  hasMorePic ? (
-                    <button
-                      className="genric-btn primary-border text-uppercase mt-3"
-                      onClick={this.morePhotos}
-                    >
-                      Load more
-                    </button>
-                  ) : (
-                    <p>No more image...</p>
-                  ),
-                )
+                ))
               ) : (
                 <p className="text-lead">No Images Found...</p>
               )}
             </div>
+            {hasMorePic ? (
+              <button
+                className="genric-btn primary-border text-uppercase mt-3"
+                onClick={this.morePhotos}
+              >
+                Load more
+              </button>
+            ) : (
+              <p>No more image...</p>
+            )}
           </div>
         </section>
         {/* <!-- End gallery Area -->*/}
