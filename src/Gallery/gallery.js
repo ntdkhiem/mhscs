@@ -36,6 +36,10 @@ class Gallery extends PureComponent {
       .then(data => {
         const photos = this.state.photos
         let newPhotos = []
+<<<<<<< HEAD
+=======
+        console.log(data)
+>>>>>>> c917dfa98a064aa0a510b6bcb4c9eff8358db45b
         data.files.map(file => {
           return newPhotos.push({
             id: file.id,
