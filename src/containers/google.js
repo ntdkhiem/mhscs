@@ -1,9 +1,8 @@
 import request from "superagent"
 import $ from "jquery"
 
-const CALENDAR_ID = "0gvfrnaahon9k8csfuq6n44uq0@group.calendar.google.com"
-const PHOTOS_FOLDER_ID = "1khIzqhcnCLTEVv7tTxHiVBdhWM74mY7V"
-const API_KEY = "AIzaSyBz7ooxpS0fB7q5XZLCrsQR_vON7LXzHG0"
+const CALENDAR_ID = process.env.REACT_APP_GOOGLE_CALENDAR_ID
+const API_KEY = process.env.REACT_APP_GOOGLE_API_KEY
 var google_calendar_url_params = {
   key: API_KEY,
   timeMin: new Date().toISOString(),
@@ -12,17 +11,6 @@ var google_calendar_url_params = {
 let google_calendar_url =
   `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?` +
   $.param(google_calendar_url_params)
-
-var google_drive_url_params = {
-  key: API_KEY,
-  orderBy: "createdTime desc",
-  q: `"${PHOTOS_FOLDER_ID}" in parents`,
-  pageSize: "6",
-  fields: "nextPageToken, files(id)",
-}
-let google_drive_url =
-  `https://www.googleapis.com/drive/v3/files?` +
-  $.param(google_drive_url_params)
 
 export function getEvents(callback, _maxResults = null) {
   if (_maxResults) {
@@ -42,26 +30,6 @@ export function getEvents(callback, _maxResults = null) {
         })
       })
       callback(events)
-    }
-  })
-}
-
-export function getPhotos(callback, _token = "") {
-  if (_token !== "") {
-    google_drive_url += _token
-  }
-  request.get(`${google_drive_url}`).end((err, resp) => {
-    if (!err) {
-      const photos = []
-      JSON.parse(resp.text).files.map(file => {
-        return photos.push({
-          id: file.id,
-          thumbNail: `//drive.google.com/thumbnail?id=${file.id}&sz=w360-h250`,
-          link: `//drive.google.com/open?id=${file.id}`,
-        })
-      })
-      photos.push(JSON.parse(resp.text).nextPageToken)
-      callback(photos)
     }
   })
 }
