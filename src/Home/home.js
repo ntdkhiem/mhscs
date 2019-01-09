@@ -116,37 +116,38 @@ let homeStyle = {
   backgroundImage: "url('./assets/img/banner-bg.jpg')",
   particles: {
     width: "100%",
-    height: "100%",
-    position: "fixed",
-    zIndex: '-1'
+    height: "30vh",
+    position: "absolute",
+    zIndex: "-1",
   },
 }
 let particlesParams = {
   fps_limit: 28,
   particles: {
     number: {
-      value: 30,
+      value: 70,
       density: {
         enable: false,
       },
     },
-    color: {
-      value: "#b418f5",
-    },
     opacity: {
-      value: 0.4,
+      value: 0.2,
     },
     line_linked: {
       enable: true,
       opacity: 0.5,
-      color: "#000",
+      width: 1.8,
+      color: "#1034A6",
+      distance: 300,
     },
     shape: {
       stroke: {
-        width: 3,
+        width: 5,
+        color: "#0080FF",
       },
     },
   },
+  retina_detect: true,
 }
 
 export default Home

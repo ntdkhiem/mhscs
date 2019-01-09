@@ -11,6 +11,7 @@ import TermsService from "./SubPages/termsService"
 import NotFound from "./NotFound/notFound"
 
 // import components to be used below
+import WithTracker from "./containers/withTracker"
 import Slack from "./components/Slack"
 import Footer from "./components/Footer"
 
@@ -81,13 +82,13 @@ class App extends Component {
           </header>
           <section className="content">
             <Switch>
-              <Route exact path="/" component={Home} />
-              <Route path="/about" component={About} />
-              <Route path="/tracks" component={Tracks} />
-              <Route path="/gallery" component={Gallery} />
-              <Route path="/events" component={Events} />
-              <Route path="/contact" component={Contact} />
-              <Route path="/terms" component={TermsService} />
+              <Route exact path="/" component={WithTracker(Home)} />
+              <Route path="/about" component={WithTracker(About)} />
+              <Route path="/tracks" component={WithTracker(Tracks)} />
+              <Route path="/gallery" component={WithTracker(Gallery)} />
+              <Route path="/events" component={WithTracker(Events)} />
+              <Route path="/contact" component={WithTracker(Contact)} />
+              <Route path="/terms" component={WithTracker(TermsService)} />
               <Route path="*" component={NotFound} />
             </Switch>
           </section>
