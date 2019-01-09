@@ -1,4 +1,6 @@
 import React from "react"
+import Particles from "react-particles-js"
+
 import Feature from "../components/Feature"
 import Goal from "../components/goal"
 import TracksList from "../components/tracks"
@@ -9,6 +11,11 @@ import Review from "../components/review"
 const Home = () => {
   return (
     <React.Fragment>
+      <Particles
+        style={homeStyle.particles}
+        className="d-lg-block d-none"
+        params={particlesParams}
+      />
       {/* <!-- start banner Area --> */}
       <section className="banner-area relative" id="home" style={homeStyle}>
         <div className="overlay overlay-bg">
@@ -107,6 +114,39 @@ const Home = () => {
 
 let homeStyle = {
   backgroundImage: "url('./assets/img/banner-bg.jpg')",
+  particles: {
+    width: "100%",
+    height: "100%",
+    position: "fixed",
+    zIndex: '-1'
+  },
+}
+let particlesParams = {
+  fps_limit: 28,
+  particles: {
+    number: {
+      value: 30,
+      density: {
+        enable: false,
+      },
+    },
+    color: {
+      value: "#b418f5",
+    },
+    opacity: {
+      value: 0.4,
+    },
+    line_linked: {
+      enable: true,
+      opacity: 0.5,
+      color: "#000",
+    },
+    shape: {
+      stroke: {
+        width: 3,
+      },
+    },
+  },
 }
 
 export default Home
