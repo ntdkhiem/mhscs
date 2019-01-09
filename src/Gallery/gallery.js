@@ -1,40 +1,113 @@
 import React, { PureComponent } from "react"
 import Image from "react-image-resizer"
+import $ from "jquery"
 
-import { getPhotos } from "../containers/google"
 import Banner from "../components/banner"
+
+const PHOTOS_FOLDER_ID = process.env.REACT_APP_GOOGLE_DRIVE_PHOTO_FOLDER_ID
+const API_KEY = process.env.REACT_APP_GOOGLE_API_KEY
+
+var google_drive_url_params = {
+  key: API_KEY,
+  orderBy: "createdTime desc",
+  q: `"${PHOTOS_FOLDER_ID}" in parents`,
+  pageSize: "6",
+  fields: "nextPageToken, files(id)",
+}
+let google_drive_url =
+  `https://www.googleapis.com/drive/v3/files?` +
+  $.param(google_drive_url_params)
 
 class Gallery extends PureComponent {
   state = {
     photos: [],
     pageToken: "",
     hasMorePic: false,
+    isLoading: true,
+    error: false,
+  }
+
+  fetchPhotos(token = null) {
+    if (token) {
+      google_drive_url += "&pageToken=" + token
+    }
+    fetch(google_drive_url)
+      .then(response => response.json())
+      .then(data => {
+        const photos = this.state.photos
+        let newPhotos = []
+        console.log(data)
+        data.files.map(file => {
+          return newPhotos.push({
+            id: file.id,
+            thumbNail: `//drive.google.com/thumbnail?id=${
+              file.id
+            }&sz=w360-h250`,
+            link: `//drive.google.com/open?id=${file.id}`,
+          })
+        })
+        this.setState({
+          pageToken: data.nextPageToken || "",
+          photos: [...photos, ...newPhotos],
+          hasMorePic: data.nextPageToken ? true : false,
+          isLoading: false,
+        })
+      })
+      .catch(error => this.setState({ error, isLoading: false }))
   }
 
   componentDidMount() {
-    getPhotos(photos => {
-      photos = this.isTokenExist(photos)
-      this.setState({ photos })
-    })
-  }
-
-  isTokenExist = photos => {
-    if (typeof photos[photos.length - 1] == "string") {
-      const pageToken = photos[photos.length - 1]
-      photos = photos.slice(0, photos.length - 1)
-      this.setState({ pageToken, hasMorePic: true })
-    } else {
-      this.setState({ hasMorePic: false })
-    }
-    return photos
+    this.fetchPhotos()
   }
 
   morePhotos = () => {
-    this.setState({ hasMorePic: false })
+    this.fetchPhotos(this.state.pageToken)
   }
 
   render() {
-    const { photos, hasMorePic } = this.state
+    const { photos, hasMorePic, isLoading, error } = this.state
+    let galleryContent
+    if (error) {
+      galleryContent = <div>Error: please contact us!! ({error.message})</div>
+    } else if (isLoading) {
+      galleryContent = <div>Loading...</div>
+    } else {
+      galleryContent = (
+        <React.Fragment>
+          <div className="row justify-content-center">
+            {photos.length !== 0 ? (
+              photos.map(photo => (
+                <div
+                  key={photo.id}
+                  className="col-lg-3 col-md-6 col-sm-12 m-3 image-card"
+                >
+                  <a
+                    href={photo.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="img-gal"
+                  >
+                    <Image src={photo.thumbNail} width={360} height={250} />
+                  </a>
+                </div>
+              ))
+            ) : (
+              <p className="text-lead">No Images Found...</p>
+            )}
+          </div>
+          {hasMorePic ? (
+            <button
+              className="genric-btn primary-border text-uppercase mt-3"
+              onClick={this.morePhotos}
+            >
+              Load more
+            </button>
+          ) : (
+            <p>No more image...</p>
+          )}
+        </React.Fragment>
+      )
+    }
     return (
       <React.Fragment>
         {/* <!-- start banner Area --> */}
@@ -43,38 +116,7 @@ class Gallery extends PureComponent {
 
         {/* <!-- Start gallery Area --> */}
         <section className="gallery-area section-gap">
-          <div className="container-fluid text-center">
-            <div className="row justify-content-center">
-              {photos.length !== 0 ? (
-                photos.map(photo => (
-                  <div key={photo.id} className="col-lg-3 m-3 image-card">
-                    <a
-                      href={photo.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="img-gal"
-                    >
-                      <Image src={photo.thumbNail} width={360} height={250} />
-                    </a>
-                  </div>
-                ))
-              ) : (
-                <p className="text-lead">No Images Found...</p>
-              )}
-
-              {
-                  hasMorePic ? (
-                    <button
-                      className="genric-btn primary-border text-uppercase mt-3"
-                      onClick={this.morePhotos}
-                    >
-                      Load more
-                    </button>
-                  ) : (
-                    <p>No more image...</p>)
-                }
-            </div>
-          </div>
+          <div className="text-center">{galleryContent}</div>
         </section>
         {/* <!-- End gallery Area -->*/}
       </React.Fragment>
