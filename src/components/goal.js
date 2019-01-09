@@ -45,7 +45,7 @@ const Goal = props => {
         </div>
       ) : (
         <React.Fragment>
-          <div className="container">
+          <div className="container white-bg">
             <div className="row align-items-center">
               <div className="col-lg-7">
                 <Text />
