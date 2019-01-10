@@ -146,6 +146,12 @@ let particlesParams = {
         color: "#0080FF",
       },
     },
+    move: {
+      direction: "bottom-right",
+      random: true,
+      out_mode: "out",
+      bounce: false,
+    },
   },
   retina_detect: true,
 }
