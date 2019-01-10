@@ -13,7 +13,7 @@ const TracksList = () => {
       <div className="row">
         <Carusel>
           <Card
-            imgSrc="/assets/img/p1.jpg"
+            imgSrc="/assets/img/tracks/cyber.jpg"
             meta="Kevin Nguyen"
             title="Cyber Security"
             desc="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis,
@@ -21,14 +21,14 @@ const TracksList = () => {
                 repellendus saepe necessitatibus?"
           />
           <Card
-            imgSrc="/assets/img/p2.jpg"
+            imgSrc="/assets/img/tracks/algorithms.jpg"
             meta="Mohsin Braer"
             title="Algorithm"
             desc="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure
             distinctio ad dicta est nam mollitia! Quod ut cum hic esse."
           />
           <Card
-            imgSrc="/assets/img/p3.jpg"
+            imgSrc="/assets/img/tracks/graphics.jpg"
             meta="Felix Li"
             title="Graphic"
             desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
@@ -36,7 +36,7 @@ const TracksList = () => {
             dolor aperiam deleniti!"
           />
           <Card
-            imgSrc="/assets/img/p4.jpg"
+            imgSrc="/assets/img/tracks/hardware.jpg"
             meta="Jack Williams"
             title="Hardware"
             desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
