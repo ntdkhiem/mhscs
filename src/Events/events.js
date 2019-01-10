@@ -26,15 +26,31 @@ function EventAgenda({ event }) {
 }
 
 class Events extends React.PureComponent {
-  state = {
-    events: [],
-  }
-  componentDidMount() {
-    getEvents(events => {
-      this.setState({ events })
-    })
-  }
   render() {
+    const { events, error, isLoading } = this.props
+    let calendarArea
+    if (error) {
+      calendarArea = <div>Error: please contact us!! ({error.message})</div>
+    } else if (isLoading) {
+      calendarArea = <div>Loading...</div>
+    } else {
+      calendarArea = (
+        <BigCalendar
+          popup
+          localizer={localizer}
+          style={{ height: "80vh" }}
+          events={events}
+          views={[BigCalendar.Views.MONTH, BigCalendar.Views.AGENDA]}
+          defaultView="agenda"
+          components={{
+            event: Event,
+            agenda: {
+              event: EventAgenda,
+            },
+          }}
+        />
+      )
+    }
     return (
       <React.Fragment>
         {/* <!-- start banner Area --> */}
@@ -47,23 +63,11 @@ class Events extends React.PureComponent {
           desc="Random quote from mysterious"
           classes="calendar-area"
         >
-          <BigCalendar
-            popup
-            localizer={localizer}
-            style={{ height: "80vh" }}
-            events={this.state.events}
-            views={[BigCalendar.Views.MONTH, BigCalendar.Views.AGENDA]}
-            components={{
-              event: Event,
-              agenda: {
-                event: EventAgenda,
-              },
-            }}
-          />
+          {calendarArea}
         </Container>
         {/* <!-- end calendar Area --> */}
       </React.Fragment>
     )
   }
 }
-export default Events
+export default getEvents(Events, {})
