@@ -15,6 +15,8 @@ const About = () => {
       <Banner page="About Us" link="/home" />
       {/* <!-- End banner Area --> */}
 
+      <div className="p-1" />
+
       {/* start feature Area */}
       <Feature />
       {/* end feature Area */}
@@ -32,32 +34,32 @@ const About = () => {
         <div className="row justify-content-center">
           <Card
             classes="col-lg-4 col-md-5 col-sm-6"
-            imgSrc="/assets/img/p1.jpg"
+            imgSrc="/assets/img/officers/paul.jpg"
             meta="Advisor"
             title="Paul Marques"
             desc="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis
                 distinctio voluptatibus placeat obcaecati necessitatibus, unde
                 iste optio magni minima veniam!"
           >
-            <ul class="list-inline social-links">
-              <li class="list-inline-item">
+            <ul className="list-inline social-links">
+              <li className="list-inline-item">
                 <a href="!#">
-                  <i class="fa fa-facebook" />
+                  <i className="fa fa-facebook" />
                 </a>
               </li>
-              <li class="list-inline-item">
+              <li className="list-inline-item">
                 <a href="!#">
-                  <i class="fa fa-twitter" />
+                  <i className="fa fa-twitter" />
                 </a>
               </li>
-              <li class="list-inline-item">
+              <li className="list-inline-item">
                 <a href="!#">
-                  <i class="fa fa-dribbble" />
+                  <i className="fa fa-dribbble" />
                 </a>
               </li>
-              <li class="list-inline-item">
+              <li className="list-inline-item">
                 <a href="!#">
-                  <i class="fa fa-behance" />
+                  <i className="fa fa-behance" />
                 </a>
               </li>
             </ul>
@@ -66,187 +68,187 @@ const About = () => {
         <div className="row pt-5">
           <Carusel>
             <Card
-              imgSrc="/assets/img/p1.jpg"
+              imgSrc="/assets/img/officers/mohsin.jpg"
               meta="President"
               title="Mohsin Braer"
               desc="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis
                   distinctio voluptatibus placeat obcaecati necessitatibus, unde
                   iste optio magni minima veniam!"
             >
-              <ul class="list-inline social-links">
-                <li class="list-inline-item">
+              <ul className="list-inline social-links">
+                <li className="list-inline-item">
                   <a href="!#">
-                    <i class="fa fa-facebook" />
+                    <i className="fa fa-facebook" />
                   </a>
                 </li>
-                <li class="list-inline-item">
+                <li className="list-inline-item">
                   <a href="!#">
-                    <i class="fa fa-twitter" />
+                    <i className="fa fa-twitter" />
                   </a>
                 </li>
-                <li class="list-inline-item">
+                <li className="list-inline-item">
                   <a href="!#">
-                    <i class="fa fa-dribbble" />
+                    <i className="fa fa-dribbble" />
                   </a>
                 </li>
-                <li class="list-inline-item">
+                <li className="list-inline-item">
                   <a href="!#">
-                    <i class="fa fa-behance" />
+                    <i className="fa fa-behance" />
                   </a>
                 </li>
               </ul>
             </Card>
             <Card
-              imgSrc="/assets/img/p2.jpg"
+              imgSrc="/assets/img/officers/anonymous.png"
               meta="Vice President"
               title="Jacky Luong"
               desc="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis
                   distinctio voluptatibus placeat obcaecati necessitatibus, unde
                   iste optio magni minima veniam!"
             >
-              <ul class="list-inline social-links">
-                <li class="list-inline-item">
+              <ul className="list-inline social-links">
+                <li className="list-inline-item">
                   <a href="!#">
-                    <i class="fa fa-facebook" />
+                    <i className="fa fa-facebook" />
                   </a>
                 </li>
-                <li class="list-inline-item">
+                <li className="list-inline-item">
                   <a href="!#">
-                    <i class="fa fa-twitter" />
+                    <i className="fa fa-twitter" />
                   </a>
                 </li>
-                <li class="list-inline-item">
+                <li className="list-inline-item">
                   <a href="!#">
-                    <i class="fa fa-dribbble" />
+                    <i className="fa fa-dribbble" />
                   </a>
                 </li>
-                <li class="list-inline-item">
+                <li className="list-inline-item">
                   <a href="!#">
-                    <i class="fa fa-behance" />
+                    <i className="fa fa-behance" />
                   </a>
                 </li>
               </ul>
             </Card>
             <Card
-              imgSrc="/assets/img/p3.jpg"
+              imgSrc="/assets/img/officers/jack.jpg"
               meta="Hardware Officer"
               title="Jack Williams"
               desc="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis
                   distinctio voluptatibus placeat obcaecati necessitatibus, unde
                   iste optio magni minima veniam!"
             >
-              <ul class="list-inline social-links">
-                <li class="list-inline-item">
+              <ul className="list-inline social-links">
+                <li className="list-inline-item">
                   <a href="!#">
-                    <i class="fa fa-facebook" />
+                    <i className="fa fa-facebook" />
                   </a>
                 </li>
-                <li class="list-inline-item">
+                <li className="list-inline-item">
                   <a href="!#">
-                    <i class="fa fa-twitter" />
+                    <i className="fa fa-twitter" />
                   </a>
                 </li>
-                <li class="list-inline-item">
+                <li className="list-inline-item">
                   <a href="!#">
-                    <i class="fa fa-dribbble" />
+                    <i className="fa fa-dribbble" />
                   </a>
                 </li>
-                <li class="list-inline-item">
+                <li className="list-inline-item">
                   <a href="!#">
-                    <i class="fa fa-behance" />
+                    <i className="fa fa-behance" />
                   </a>
                 </li>
               </ul>
             </Card>
             <Card
-              imgSrc="/assets/img/p4.jpg"
+              imgSrc="/assets/img/officers/anonymous.png"
               meta="Graphic Officer"
               title="Felix Li"
               desc="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis
                   distinctio voluptatibus placeat obcaecati necessitatibus, unde
                   iste optio magni minima veniam!"
             >
-              <ul class="list-inline social-links">
-                <li class="list-inline-item">
+              <ul className="list-inline social-links">
+                <li className="list-inline-item">
                   <a href="!#">
-                    <i class="fa fa-facebook" />
+                    <i className="fa fa-facebook" />
                   </a>
                 </li>
-                <li class="list-inline-item">
+                <li className="list-inline-item">
                   <a href="!#">
-                    <i class="fa fa-twitter" />
+                    <i className="fa fa-twitter" />
                   </a>
                 </li>
-                <li class="list-inline-item">
+                <li className="list-inline-item">
                   <a href="!#">
-                    <i class="fa fa-dribbble" />
+                    <i className="fa fa-dribbble" />
                   </a>
                 </li>
-                <li class="list-inline-item">
+                <li className="list-inline-item">
                   <a href="!#">
-                    <i class="fa fa-behance" />
+                    <i className="fa fa-behance" />
                   </a>
                 </li>
               </ul>
             </Card>
             <Card
-              imgSrc="/assets/img/p3.jpg"
+              imgSrc="/assets/img/officers/mohsin.jpg"
               meta="Algorithm Officer"
               title="Mohsin Braer"
               desc="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis
                   distinctio voluptatibus placeat obcaecati necessitatibus, unde
                   iste optio magni minima veniam!"
             >
-              <ul class="list-inline social-links">
-                <li class="list-inline-item">
+              <ul className="list-inline social-links">
+                <li className="list-inline-item">
                   <a href="!#">
-                    <i class="fa fa-facebook" />
+                    <i className="fa fa-facebook" />
                   </a>
                 </li>
-                <li class="list-inline-item">
+                <li className="list-inline-item">
                   <a href="!#">
-                    <i class="fa fa-twitter" />
+                    <i className="fa fa-twitter" />
                   </a>
                 </li>
-                <li class="list-inline-item">
+                <li className="list-inline-item">
                   <a href="!#">
-                    <i class="fa fa-dribbble" />
+                    <i className="fa fa-dribbble" />
                   </a>
                 </li>
-                <li class="list-inline-item">
+                <li className="list-inline-item">
                   <a href="!#">
-                    <i class="fa fa-behance" />
+                    <i className="fa fa-behance" />
                   </a>
                 </li>
               </ul>
             </Card>
             <Card
-              imgSrc="/assets/img/p2.jpg"
+              imgSrc="/assets/img/officers/kevin.jpg"
               meta="Cyber Security Officer"
               title="Kevin Nguyen"
               desc="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis
                   distinctio voluptatibus placeat obcaecati necessitatibus, unde
                   iste optio magni minima veniam!"
             >
-              <ul class="list-inline social-links">
-                <li class="list-inline-item">
+              <ul className="list-inline social-links">
+                <li className="list-inline-item">
                   <a href="!#">
-                    <i class="fa fa-facebook" />
+                    <i className="fa fa-facebook" />
                   </a>
                 </li>
-                <li class="list-inline-item">
+                <li className="list-inline-item">
                   <a href="!#">
-                    <i class="fa fa-twitter" />
+                    <i className="fa fa-twitter" />
                   </a>
                 </li>
-                <li class="list-inline-item">
+                <li className="list-inline-item">
                   <a href="!#">
-                    <i class="fa fa-dribbble" />
+                    <i className="fa fa-dribbble" />
                   </a>
                 </li>
-                <li class="list-inline-item">
+                <li className="list-inline-item">
                   <a href="!#">
-                    <i class="fa fa-behance" />
+                    <i className="fa fa-behance" />
                   </a>
                 </li>
               </ul>
