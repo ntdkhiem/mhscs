@@ -1,14 +1,14 @@
 import React, { Component, Fragment } from "react"
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom"
 // import Pages to be used below
-import Home from "./Home/home"
-import About from "./About/about"
-import Tracks from "./Tracks/tracks"
-import Gallery from "./Gallery/gallery"
-import Events from "./Events/events"
-import Contact from "./Contact/contact"
-import TermsService from "./SubPages/termsService"
-import NotFound from "./NotFound/notFound"
+import Home from "./Pages/Home/home"
+import About from "./Pages/About/about"
+import Tracks from "./Pages/Tracks/tracks"
+import Events from "./Pages/Events/events"
+import Gallery from "./Pages/Gallery/gallery"
+import Contact from "./Pages/Contact/contact"
+import NotFound from "./Pages/NotFound/notFound"
+import TermsService from "./Pages/SubPages/termsService"
 
 // import components to be used below
 import { analyticsTracker } from "./containers/google"
@@ -58,13 +58,13 @@ class App extends Component {
                 <nav id="nav-menu-container">
                   <ul className="nav-menu">
                     <li>
-                      <a href="/">Home</a>
+                      <Link to="/">Home</Link>
                     </li>
                     <li>
-                      <a href="/about">About</a>
+                      <Link to="/about">About</Link>
                     </li>
                     <li>
-                      <a href="/tracks">Tracks</a>
+                      <Link to="/tracks">Tracks</Link>
                     </li>
                     <li>
                       <Link to="/events">Events</Link>

@@ -7,7 +7,6 @@ $(document).ready(function() {
     header_height_static = $(".site-header.static").outerHeight(),
     fitscreen = window_height - header_height
 
-  $(".fullscreen").css("height", window_height)
   $(".fitscreen").css("height", fitscreen)
 
   //------- Niceselect  js --------//
@@ -94,74 +93,6 @@ $(document).ready(function() {
       duration: 200,
     })
   }
-
-  //------- Owl Carusel  js --------//
-
-  $(".active-popular-carusel").owlCarousel({
-    items: 4,
-    margin: 30,
-    loop: true,
-    dots: true,
-    autoplayHoverPause: true,
-    smartSpeed: 650,
-    autoplay: true,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      480: {
-        items: 1,
-      },
-      768: {
-        items: 2,
-      },
-      992: {
-        items: 4,
-      },
-    },
-  })
-
-  $(".active-upcoming-event-carusel").owlCarousel({
-    items: 2,
-    margin: 30,
-    loop: true,
-    dots: true,
-    autoplayHoverPause: true,
-    smartSpeed: 650,
-    autoplay: true,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      480: {
-        items: 1,
-      },
-      992: {
-        items: 2,
-      },
-    },
-  })
-
-  $(".active-review-carusel").owlCarousel({
-    items: 2,
-    margin: 30,
-    loop: true,
-    dots: true,
-    autoplayHoverPause: true,
-    smartSpeed: 650,
-    autoplay: true,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      480: {
-        items: 1,
-      },
-      768: {
-        items: 2,
-      },
-    },
-  })
 
   //------- Mobile Nav  js --------//
 
