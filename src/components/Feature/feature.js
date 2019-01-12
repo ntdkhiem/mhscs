@@ -16,12 +16,12 @@ const Feature = () => {
           <div className="col-lg-4">
             <div className="single-feature">
               <div className="title">
-                <h4>Teach By Students</h4>
+                <h4>Taught By Students</h4>
               </div>
               <div className="desc-wrap">
                 <p>
-                  Learn faster and adapt easier and more comfortable in the
-                  environment if your teacher is <b>YOUR FRIEND</b>.
+                  Learn in a comfortable and exciting environment taught by
+                  students <b> FOR STUDENTS </b>
                 </p>
               </div>
             </div>
@@ -29,12 +29,12 @@ const Feature = () => {
           <div className="col-lg-4">
             <div className="single-feature">
               <div className="title">
-                <h4>Free Courses</h4>
+                <h4>Excellent Programs</h4>
               </div>
               <div className="desc-wrap">
                 <p>
-                  Students will be able to learn from a more experienced student
-                  in a specific track for <b>FREE</b>.
+                  Students have the opportunity to <b>EXPLORE AREAS</b> in
+                  Computer Science that are normally left out in high school.
                 </p>
               </div>
             </div>
@@ -42,13 +42,12 @@ const Feature = () => {
           <div className="col-lg-4">
             <div className="single-feature">
               <div className="title">
-                <h4>Great Lessons</h4>
+                <h4>Amazing Opportunities</h4>
               </div>
               <div className="desc-wrap">
                 <p>
-                  Lessons were trials and errors from the real world that
-                  "teachers" willing to share for others to{" "}
-                  <b>LEARN AND AVOID</b>.
+                  From the <b>Hackathon competitions</b> to the lectures from
+                  the biggest local software engineers and professors.
                 </p>
               </div>
             </div>
