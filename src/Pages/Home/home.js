@@ -1,12 +1,13 @@
 import React from "react"
 import Particles from "react-particles-js"
 
-import Feature from "../components/Feature"
-import Goal from "../components/goal"
-import TracksList from "../components/tracks"
-import Events from "../components/events"
-import MemberCTA from "../components/memberCTA"
-import Review from "../components/review"
+import Feature from "../../components/Feature"
+import Goal from "../../components/goal"
+import TracksList from "../../components/tracks"
+import Events from "../../components/events"
+import MemberCTA from "../../components/memberCTA"
+import Review from "../../components/review"
+// import CarouselTest from "../../Pages/Test/test"
 
 const Home = () => {
   return (
@@ -20,14 +21,15 @@ const Home = () => {
       <section className="banner-area relative" id="home" style={homeStyle}>
         <div className="overlay overlay-bg">
           <div className="container">
-            <div className="row fullscreen d-flex align-items-center justify-content-between">
+            <div
+              className="row d-flex align-items-center justify-content-between"
+              style={{ position: "absolute", top: "32%" }}
+            >
               <div className="banner-content col-lg-9 col-md-12">
                 <p className="text-white text-uppercase">
                   Welcome to <b>Malden High School Computer Club</b>
                 </p>
-                <h1 className="text-uppercase">
-                  We Ensure better Education For a better world
-                </h1>
+                <h1 className="text-uppercase">Empowered by Innovation</h1>
                 <p className="pt-10 pb-10">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Excepturi error illo numquam voluptas sapiente tempora ducimus
@@ -63,10 +65,9 @@ const Home = () => {
             <div className="col-lg-6 col-md-6 search-course-left">
               <h1 className="text-white">Who should join us</h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-                officia quis, repudiandae deserunt possimus neque cum quasi
-                vitae, porro nesciunt, natus quaerat soluta suscipit. Nostrum
-                facilis quaerat placeat nam nesciunt!
+                If you are interested in learning more about the endless
+                opportunities the field of Computer Science and Technology have
+                to offer, while also participating in local
               </p>
               <div className="row details-content">
                 <div className="col single-detials">
@@ -81,8 +82,7 @@ const Home = () => {
                   <span className="lnr lnr-license" />
                   <h4>Self Teach</h4>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Aliquid illum rerum consequuntur.
+                    Have the ability to teach yourself anything and everything!
                   </p>
                 </div>
               </div>

@@ -1,6 +1,6 @@
 import React from "react"
-import Banner from "../components/banner"
-import ContactForm from "../components/Forms/contact"
+import Banner from "../../components/banner"
+import ContactForm from "../../components/Forms/contact"
 
 const Contact = () => {
   return (

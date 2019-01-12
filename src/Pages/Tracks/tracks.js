@@ -1,6 +1,6 @@
 import React from "react"
-import Banner from "../components/banner"
-import TracksList from "../components/tracks"
+import Banner from "../../components/banner"
+import TracksList from "../../components/tracks"
 
 const Tracks = () => {
   return (

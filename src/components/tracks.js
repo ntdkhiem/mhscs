@@ -1,6 +1,6 @@
 import React from "react"
 import Container from "./container"
-import Carusel from "./carusel"
+import Carousel from "./carousel"
 import Card from "./card"
 
 const TracksList = () => {
@@ -8,42 +8,35 @@ const TracksList = () => {
     <Container
       title="Popular Tracks we offer"
       desc="There is a moment in the life of any aspiring."
-      classes="popular-course-area section-gap"
+      classes="tracks-area section-gap"
     >
       <div className="row">
-        <Carusel>
+        <Carousel>
           <Card
             imgSrc="/assets/img/tracks/cyber.jpg"
             meta="Kevin Nguyen"
             title="Cyber Security"
-            desc="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis,
-                ad sequi exercitationem nobis vitae molestias atque quam
-                repellendus saepe necessitatibus?"
+            desc="The goal of this track is to help you understand how cyber attacks work and how to defend yourself by do and think as a hacker."
           />
           <Card
             imgSrc="/assets/img/tracks/algorithms.jpg"
             meta="Mohsin Braer"
-            title="Algorithm"
-            desc="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure
-            distinctio ad dicta est nam mollitia! Quod ut cum hic esse."
+            title="Algorithms"
+            desc="Explore a concept essential to programming for making your computer program as effecient as possible"
           />
           <Card
             imgSrc="/assets/img/tracks/graphics.jpg"
             meta="Felix Li"
             title="Graphic"
-            desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-            consequuntur commodi eveniet qui omnis nemo ducimus laboriosam
-            dolor aperiam deleniti!"
+            desc="The goal of the Graphics track is to perfect skills of effective design and user interfacing through software such as Photoshop and Illustrator."
           />
           <Card
             imgSrc="/assets/img/tracks/hardware.jpg"
             meta="Jack Williams"
             title="Hardware"
-            desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-            consequuntur commodi eveniet qui omnis nemo ducimus laboriosam
-            dolor aperiam deleniti!"
+            desc="This track will focus on the main components of a computer, as well as address how a mix of hardware and software is used to communicate between computers."
           />
-        </Carusel>
+        </Carousel>
       </div>
     </Container>
   )
