@@ -1,12 +1,12 @@
 import React from "react"
-import Banner from "../components/banner"
-import Feature from "../components/Feature"
-import Goal from "../components/goal"
-import Container from "../components/container"
-import Carusel from "../components/carusel"
-import Card from "../components/card"
-import MemberCTA from "../components/memberCTA"
-import Review from "../components/review"
+import Banner from "../../components/banner"
+import Feature from "../../components/Feature"
+import Goal from "../../components/goal"
+import Container from "../../components/container"
+import Carousel from "../../components/carousel"
+import Card from "../../components/card"
+import MemberCTA from "../../components/memberCTA"
+import Review from "../../components/review"
 
 const About = () => {
   return (
@@ -37,36 +37,11 @@ const About = () => {
             imgSrc="/assets/img/officers/paul.jpg"
             meta="Advisor"
             title="Paul Marques"
-            desc="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis
-                distinctio voluptatibus placeat obcaecati necessitatibus, unde
-                iste optio magni minima veniam!"
-          >
-            <ul className="list-inline social-links">
-              <li className="list-inline-item">
-                <a href="!#">
-                  <i className="fa fa-facebook" />
-                </a>
-              </li>
-              <li className="list-inline-item">
-                <a href="!#">
-                  <i className="fa fa-twitter" />
-                </a>
-              </li>
-              <li className="list-inline-item">
-                <a href="!#">
-                  <i className="fa fa-dribbble" />
-                </a>
-              </li>
-              <li className="list-inline-item">
-                <a href="!#">
-                  <i className="fa fa-behance" />
-                </a>
-              </li>
-            </ul>
-          </Card>
+            desc="Want to meet one of the top Comp Sci teachers in the country? "
+          />
         </div>
         <div className="row pt-5">
-          <Carusel>
+          <Carousel>
             <Card
               imgSrc="/assets/img/officers/mohsin.jpg"
               meta="President"
@@ -78,22 +53,12 @@ const About = () => {
               <ul className="list-inline social-links">
                 <li className="list-inline-item">
                   <a href="!#">
-                    <i className="fa fa-facebook" />
+                    <i className="fa fa-linkedin" />
                   </a>
                 </li>
                 <li className="list-inline-item">
                   <a href="!#">
-                    <i className="fa fa-twitter" />
-                  </a>
-                </li>
-                <li className="list-inline-item">
-                  <a href="!#">
-                    <i className="fa fa-dribbble" />
-                  </a>
-                </li>
-                <li className="list-inline-item">
-                  <a href="!#">
-                    <i className="fa fa-behance" />
+                    <i className="fa fa-envelope" />
                   </a>
                 </li>
               </ul>
@@ -133,9 +98,7 @@ const About = () => {
               imgSrc="/assets/img/officers/jack.jpg"
               meta="Hardware Officer"
               title="Jack Williams"
-              desc="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis
-                  distinctio voluptatibus placeat obcaecati necessitatibus, unde
-                  iste optio magni minima veniam!"
+              desc="Forget the Geek Squad, when you got Jack Williams as your hardware manager, you can fix any problem."
             >
               <ul className="list-inline social-links">
                 <li className="list-inline-item">
@@ -164,9 +127,7 @@ const About = () => {
               imgSrc="/assets/img/officers/anonymous.png"
               meta="Graphic Officer"
               title="Felix Li"
-              desc="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis
-                  distinctio voluptatibus placeat obcaecati necessitatibus, unde
-                  iste optio magni minima veniam!"
+              desc="Interested in learning how to make and edit graphics "
             >
               <ul className="list-inline social-links">
                 <li className="list-inline-item">
@@ -226,9 +187,7 @@ const About = () => {
               imgSrc="/assets/img/officers/kevin.jpg"
               meta="Cyber Security Officer"
               title="Kevin Nguyen"
-              desc="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis
-                  distinctio voluptatibus placeat obcaecati necessitatibus, unde
-                  iste optio magni minima veniam!"
+              desc="Is it a bird? Is it a plane? No it's Kevin Nguyen. "
             >
               <ul className="list-inline social-links">
                 <li className="list-inline-item">
@@ -253,7 +212,7 @@ const About = () => {
                 </li>
               </ul>
             </Card>
-          </Carusel>
+          </Carousel>
         </div>
       </Container>
       {/* end officers area */}

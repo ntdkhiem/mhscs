@@ -1,8 +1,8 @@
 import React, { PureComponent } from "react"
 import Image from "react-image-resizer"
 
-import Banner from "../components/banner"
-import { getPhotos } from "../containers/google"
+import Banner from "../../components/banner"
+import { getPhotos } from "../../containers/google"
 
 class Gallery extends PureComponent {
   render() {
@@ -57,7 +57,7 @@ class Gallery extends PureComponent {
 
         {/* <!-- Start gallery Area --> */}
         <section className="gallery-area section-gap">
-          <div className="text-center">{galleryContent}</div>
+          <div className="container-fluid text-center">{galleryContent}</div>
         </section>
         {/* <!-- End gallery Area -->*/}
       </React.Fragment>
