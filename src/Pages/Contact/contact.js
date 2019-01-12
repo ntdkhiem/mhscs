@@ -1,10 +1,16 @@
 import React from "react"
+import { Helmet } from "react-helmet"
+
 import Banner from "../../components/banner"
 import ContactForm from "../../components/Forms/contact"
 
 const Contact = () => {
   return (
     <React.Fragment>
+      <Helmet>
+        <title>Contact | MHSCS</title>
+      </Helmet>
+
       {/* <!-- start banner Area --> */}
       <Banner page="Gallery" link="/gallery" />
       {/* <!-- End banner Area --> */}

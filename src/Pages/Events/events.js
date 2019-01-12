@@ -1,10 +1,13 @@
-import React from "react"
+import React, { PureComponent } from "react"
+import { Helmet } from "react-helmet"
+import Loader from "react-loaders"
+import moment from "moment"
+import BigCalendar from "react-big-calendar"
+import "react-big-calendar/lib/css/react-big-calendar.css"
+
 import Banner from "../../components/banner"
 import Container from "../../components/container"
-import moment from "moment"
 import { getEvents } from "../../containers/google"
-import "react-big-calendar/lib/css/react-big-calendar.css"
-import BigCalendar from "react-big-calendar"
 // a localizer for BigCalendar
 const localizer = BigCalendar.momentLocalizer(moment)
 
@@ -25,14 +28,14 @@ function EventAgenda({ event }) {
   )
 }
 
-class Events extends React.PureComponent {
+class Events extends PureComponent {
   render() {
     const { events, error, isLoading } = this.props
     let calendarArea
     if (error) {
       calendarArea = <div>Error: please contact us!! ({error.message})</div>
     } else if (isLoading) {
-      calendarArea = <div>Loading...</div>
+      calendarArea = <Loader type="pacman" active={isLoading} />
     } else {
       calendarArea = (
         <BigCalendar
@@ -53,6 +56,10 @@ class Events extends React.PureComponent {
     }
     return (
       <React.Fragment>
+        <Helmet>
+          <title>Events | MHSCS</title>
+        </Helmet>
+
         {/* <!-- start banner Area --> */}
         <Banner page="Events" link="/events" />
         {/* <!-- End banner Area --> */}

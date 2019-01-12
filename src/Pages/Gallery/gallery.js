@@ -1,5 +1,7 @@
 import React, { PureComponent } from "react"
+import { Helmet } from "react-helmet"
 import Image from "react-image-resizer"
+import Loader from "react-loaders"
 
 import Banner from "../../components/banner"
 import { getPhotos } from "../../containers/google"
@@ -11,7 +13,7 @@ class Gallery extends PureComponent {
     if (error) {
       galleryContent = <div>Error: please contact us!! ({error.message})</div>
     } else if (isLoading) {
-      galleryContent = <div>Loading...</div>
+      galleryContent = <Loader type="pacman" active={isLoading} />
     } else {
       galleryContent = (
         <React.Fragment>
@@ -20,7 +22,7 @@ class Gallery extends PureComponent {
               photos.map(photo => (
                 <div
                   key={photo.id}
-                  className="col-lg-3 col-md-6 col-sm-12 m-3 image-card"
+                  className="col-lg-3 col-md-4 col-sm-8 m-3 image-card"
                 >
                   <a
                     href={photo.link}
@@ -51,6 +53,10 @@ class Gallery extends PureComponent {
     }
     return (
       <React.Fragment>
+        <Helmet>
+          <title>Gallery | MHSCS</title>
+        </Helmet>
+
         {/* <!-- start banner Area --> */}
         <Banner page="Gallery" link="/gallery" />
         {/* <!-- End banner Area --> */}

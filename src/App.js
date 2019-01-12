@@ -10,6 +10,8 @@ import Contact from "./Pages/Contact/contact"
 import NotFound from "./Pages/NotFound/notFound"
 import TermsService from "./Pages/SubPages/termsService"
 
+import ScrollBarTest from "./Pages/test"
+
 // import components to be used below
 import { analyticsTracker } from "./containers/google"
 import Slack from "./components/Slack"
@@ -89,6 +91,7 @@ class App extends Component {
               <Route path="/events" component={analyticsTracker(Events)} />
               <Route path="/contact" component={analyticsTracker(Contact)} />
               <Route path="/terms" component={analyticsTracker(TermsService)} />
+              <Route path="/test" component={ScrollBarTest} />
               <Route path="*" component={NotFound} />
             </Switch>
           </section>

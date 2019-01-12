@@ -209,7 +209,8 @@
 
 /*-------- End feature Area ------------*/
 
-.test-carousel {
+/*-------- Start carousel Area ------------*/
+.carousel-area {
   .owl-dots {
     text-align: center;
     bottom: 5px;
@@ -237,6 +238,7 @@
     background-color: $primary-color !important;
   }
 }
+
 .single-item-carousel {
   .thumb {
     overflow: hidden;
@@ -244,84 +246,8 @@
       width: 100%;
       @include transition();
     }
-  }
-  .meta {
-    margin-top: -26px;
-    z-index: 2;
-    position: inherit;
-    padding: 0px 10px;
-    p {
-      font-size: 12px;
-      font-weight: 300;
-      color: $white;
-      margin-bottom: 0px;
-      .lnr {
-        margin: 0px 5px;
-      }
-    }
-    h4 {
-      color: $white;
-    }
-  }
-  .details {
-    h4 {
-      @include transition();
-      margin: 20px 0px;
-      &:hover {
-        color: $primary-color !important;
-      }
-    }
-  }
-  @media (max-width: 576px) {
-    margin: 15px;
-  }
-  &:hover {
-    .thumb {
-      img {
-        transform: scale(1.1);
-      }
-    }
-  }
-}
-
-/*-------- Start popular-course Area ------------*/
-
-.popular-course-area {
-  .owl-dots {
-    text-align: center;
-    bottom: 5px;
-    margin-top: 40px;
-    width: 100%;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
-
-  .owl-dot {
-    height: 10px;
-    width: 10px;
-    display: inline-block;
-    background: rgba(127, 127, 127, 0.5);
-    margin-left: 5px;
-    margin-right: 5px;
-    @include transition();
-  }
-
-  .owl-dot.active {
-    @include transition;
-    background: $primary-color;
-  }
-}
-
-.single-popular-carusel {
-  // .thumb-wrap {
-  // }
-  .thumb {
-    overflow: hidden;
-    img {
-      width: 100%;
-      @include transition();
+    .overlay-bg {
+      background: rgba(0, 0, 0, 0.29);
     }
   }
   .meta {
@@ -363,7 +289,7 @@
   }
 }
 
-/*-------- End popular-course Area ------------*/
+/*-------- End carousel Area ------------*/
 
 /*-------- Start search-course Area ------------*/
 

@@ -1,4 +1,5 @@
-import React from "react"
+import React, { PureComponent } from "react"
+import { Helmet } from "react-helmet"
 import Particles from "react-particles-js"
 
 import Feature from "../../components/Feature"
@@ -9,107 +10,113 @@ import MemberCTA from "../../components/memberCTA"
 import Review from "../../components/review"
 // import CarouselTest from "../../Pages/Test/test"
 
-const Home = () => {
-  return (
-    <React.Fragment>
-      <Particles
-        style={homeStyle.particles}
-        className="d-lg-block d-none"
-        params={particlesParams}
-      />
-      {/* <!-- start banner Area --> */}
-      <section className="banner-area relative" id="home" style={homeStyle}>
-        <div className="overlay overlay-bg">
+class Home extends PureComponent {
+  render() {
+    return (
+      <React.Fragment>
+        <Helmet>
+          <title>Home | MHSCS</title>
+        </Helmet>
+        <Particles
+          style={homeStyle.particles}
+          className="d-lg-block d-none"
+          params={particlesParams}
+        />
+        {/* <!-- start banner Area --> */}
+        <section className="banner-area relative" id="home" style={homeStyle}>
+          <div className="overlay overlay-bg">
+            <div className="container">
+              <div
+                className="row d-flex align-items-center justify-content-between"
+                style={{ position: "absolute", top: "32%" }}
+              >
+                <div className="banner-content col-lg-9 col-md-12">
+                  <p className="text-white text-uppercase">
+                    Welcome to <b>Malden High School Computer Club</b>
+                  </p>
+                  <h1 className="text-uppercase">Empowered by Innovation</h1>
+                  <p className="pt-10 pb-10">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Excepturi error illo numquam voluptas sapiente tempora
+                    ducimus totam eius neque atque?
+                  </p>
+                  <a href="#feature" className="primary-btn text-uppercase">
+                    Explore More
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* <!-- End banner Area --> */}
+
+        {/* start feature Area */}
+        <Feature />
+        {/* end feature Area */}
+
+        {/* start our's goal area */}
+        <Goal layout="left" />
+        {/* end our's goal area */}
+
+        {/* start tracks area */}
+        <TracksList />
+        {/* end tracks area */}
+
+        {/* <!-- Start search-course Area --> */}
+        <section className="search-course-area relative pt-80 pb-80">
+          <div className="overlay overlay-bg" />
           <div className="container">
-            <div
-              className="row d-flex align-items-center justify-content-between"
-              style={{ position: "absolute", top: "32%" }}
-            >
-              <div className="banner-content col-lg-9 col-md-12">
-                <p className="text-white text-uppercase">
-                  Welcome to <b>Malden High School Computer Club</b>
+            <div className="row justify-content-between align-items-center">
+              <div className="col-lg-6 col-md-6 search-course-left">
+                <h1 className="text-white">Who should join us</h1>
+                <p>
+                  If you are interested in learning more about the endless
+                  opportunities the field of Computer Science and Technology
+                  have to offer, while also participating in local
                 </p>
-                <h1 className="text-uppercase">Empowered by Innovation</h1>
-                <p className="pt-10 pb-10">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Excepturi error illo numquam voluptas sapiente tempora ducimus
-                  totam eius neque atque?
-                </p>
-                <a href="#feature" className="primary-btn text-uppercase">
-                  Explore More
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* <!-- End banner Area --> */}
-
-      {/* start feature Area */}
-      <Feature />
-      {/* end feature Area */}
-
-      {/* start our's goal area */}
-      <Goal layout="left" />
-      {/* end our's goal area */}
-
-      {/* start tracks area */}
-      <TracksList />
-      {/* end tracks area */}
-
-      {/* <!-- Start search-course Area --> */}
-      <section className="search-course-area relative pt-80 pb-80">
-        <div className="overlay overlay-bg" />
-        <div className="container">
-          <div className="row justify-content-between align-items-center">
-            <div className="col-lg-6 col-md-6 search-course-left">
-              <h1 className="text-white">Who should join us</h1>
-              <p>
-                If you are interested in learning more about the endless
-                opportunities the field of Computer Science and Technology have
-                to offer, while also participating in local
-              </p>
-              <div className="row details-content">
-                <div className="col single-detials">
-                  <span className="lnr lnr-graduation-hat" />
-                  <h4>Curiosity Require</h4>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quia, sint?
-                  </p>
+                <div className="row details-content">
+                  <div className="col single-detials">
+                    <span className="lnr lnr-graduation-hat" />
+                    <h4>Curiosity Require</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quia, sint?
+                    </p>
+                  </div>
+                  <div className="col single-detials">
+                    <span className="lnr lnr-license" />
+                    <h4>Self Teach</h4>
+                    <p>
+                      Have the ability to teach yourself anything and
+                      everything!
+                    </p>
+                  </div>
                 </div>
-                <div className="col single-detials">
-                  <span className="lnr lnr-license" />
-                  <h4>Self Teach</h4>
-                  <p>
-                    Have the ability to teach yourself anything and everything!
-                  </p>
+              </div>
+              <div className="col-lg-4 col-md-6 search-course-right section-gap">
+                <div className="container text-center">
+                  <h4 className="text-white">Club's Rules here</h4>
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6 search-course-right section-gap">
-              <div className="container text-center">
-                <h4 className="text-white">Club's Rules here</h4>
-              </div>
-            </div>
           </div>
-        </div>
-      </section>
-      {/* <!-- End search-course Area --> */}
+        </section>
+        {/* <!-- End search-course Area --> */}
 
-      {/* start upcoming-event area */}
-      <Events />
-      {/* end upcoming-event area */}
+        {/* start upcoming-event area */}
+        <Events />
+        {/* end upcoming-event area */}
 
-      {/* start member CTA area */}
-      <MemberCTA />
-      {/* end member CTA area */}
+        {/* start member CTA area */}
+        <MemberCTA />
+        {/* end member CTA area */}
 
-      {/* start review area */}
-      <Review />
-      {/* end review area */}
-    </React.Fragment>
-  )
+        {/* start review area */}
+        <Review />
+        {/* end review area */}
+      </React.Fragment>
+    )
+  }
 }
 
 let homeStyle = {
