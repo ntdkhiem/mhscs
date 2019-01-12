@@ -30,7 +30,7 @@ class Carousel extends PureComponent {
   render() {
     let options = this.props.options || defaultOptions
     return (
-      <OwlCarousel className="test-carousel" {...options}>
+      <OwlCarousel className="carousel-area" {...options}>
         {this.props.children}
       </OwlCarousel>
     )
