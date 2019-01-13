@@ -24,6 +24,34 @@ const Footer = () => {
                 Consectetur tempora facilis corrupti ab voluptas perspiciatis
                 repudiandae corporis nulla. Consequuntur, facere?
               </p>
+              <h4 className="mt-5 mb-3">Support us</h4>
+              <form
+                action="https://www.paypal.com/cgi-bin/webscr"
+                method="post"
+                target="_top"
+              >
+                <input type="hidden" name="cmd" value="_s-xclick" />
+                <input
+                  type="hidden"
+                  name="hosted_button_id"
+                  value="DA8E8J294SFF2"
+                />
+                <input
+                  type="image"
+                  src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
+                  border="0"
+                  name="submit"
+                  title="PayPal - The safer, easier way to pay online!"
+                  alt="Donate with PayPal button"
+                />
+                <img
+                  alt=""
+                  border="0"
+                  src="https://www.paypal.com/en_US/i/scr/pixel.gif"
+                  width="1"
+                  height="1"
+                />
+              </form>
             </div>
           </div>
           <div className="col-lg-2 col-md-6 col-sm-6">
