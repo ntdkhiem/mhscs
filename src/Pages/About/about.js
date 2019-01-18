@@ -1,5 +1,6 @@
 import React, { PureComponent } from "react"
 import { Helmet } from "react-helmet"
+import Loader from "react-loaders"
 
 import Banner from "../../components/banner"
 import Feature from "../../components/Feature"
@@ -10,8 +11,48 @@ import Card from "../../components/card"
 import MemberCTA from "../../components/memberCTA"
 import Review from "../../components/review"
 
+import { getOfficers } from "../../containers/google"
+
 class About extends PureComponent {
   render() {
+    const { officers, isLoading, error } = this.props
+    let officersContent
+    if (error) {
+      officersContent = <div>Error: please contact us!! ({error.message})</div>
+    } else if (isLoading) {
+      officersContent = <Loader type="pacman" active={isLoading} />
+    } else {
+      officersContent = (
+        <React.Fragment>
+          <div className="row pt-5">
+            <Carousel>
+              {officers.map(officer => (
+                <Card
+                  key={officer.timestamp}
+                  imgSrc={officer.avatar}
+                  meta={officer.role}
+                  title={officer.name}
+                  desc={officer.about}
+                >
+                  <ul className="list-inline social-links">
+                    {officer.medias.map((media, index) => {
+                      const key = Object.keys(media)[0]
+                      return (
+                        <li key={index} className="list-inline-item">
+                          <a href={media[key]}>
+                            <i className={"fa fa-" + key} />
+                          </a>
+                        </li>
+                      )
+                    })}
+                  </ul>
+                </Card>
+              ))}
+            </Carousel>
+          </div>
+        </React.Fragment>
+      )
+    }
     return (
       <React.Fragment>
         <Helmet>
@@ -46,180 +87,7 @@ class About extends PureComponent {
               desc="Want to meet one of the top Comp Sci teachers in the country? "
             />
           </div>
-          <div className="row pt-5">
-            <Carousel>
-              <Card
-                imgSrc="/assets/img/officers/mohsin.jpg"
-                meta="President"
-                title="Mohsin Braer"
-                desc="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis
-                  distinctio voluptatibus placeat obcaecati necessitatibus, unde
-                  iste optio magni minima veniam!"
-              >
-                <ul className="list-inline social-links">
-                  <li className="list-inline-item">
-                    <a href="!#">
-                      <i className="fa fa-linkedin" />
-                    </a>
-                  </li>
-                  <li className="list-inline-item">
-                    <a href="!#">
-                      <i className="fa fa-envelope" />
-                    </a>
-                  </li>
-                </ul>
-              </Card>
-              <Card
-                imgSrc="/assets/img/officers/anonymous.png"
-                meta="Vice President"
-                title="Jacky Luong"
-                desc="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis
-                  distinctio voluptatibus placeat obcaecati necessitatibus, unde
-                  iste optio magni minima veniam!"
-              >
-                <ul className="list-inline social-links">
-                  <li className="list-inline-item">
-                    <a href="!#">
-                      <i className="fa fa-facebook" />
-                    </a>
-                  </li>
-                  <li className="list-inline-item">
-                    <a href="!#">
-                      <i className="fa fa-twitter" />
-                    </a>
-                  </li>
-                  <li className="list-inline-item">
-                    <a href="!#">
-                      <i className="fa fa-dribbble" />
-                    </a>
-                  </li>
-                  <li className="list-inline-item">
-                    <a href="!#">
-                      <i className="fa fa-behance" />
-                    </a>
-                  </li>
-                </ul>
-              </Card>
-              <Card
-                imgSrc="/assets/img/officers/jack.jpg"
-                meta="Hardware Officer"
-                title="Jack Williams"
-                desc="Forget the Geek Squad, when you got Jack Williams as your hardware manager, you can fix any problem."
-              >
-                <ul className="list-inline social-links">
-                  <li className="list-inline-item">
-                    <a href="!#">
-                      <i className="fa fa-facebook" />
-                    </a>
-                  </li>
-                  <li className="list-inline-item">
-                    <a href="!#">
-                      <i className="fa fa-twitter" />
-                    </a>
-                  </li>
-                  <li className="list-inline-item">
-                    <a href="!#">
-                      <i className="fa fa-dribbble" />
-                    </a>
-                  </li>
-                  <li className="list-inline-item">
-                    <a href="!#">
-                      <i className="fa fa-behance" />
-                    </a>
-                  </li>
-                </ul>
-              </Card>
-              <Card
-                imgSrc="/assets/img/officers/anonymous.png"
-                meta="Graphic Officer"
-                title="Felix Li"
-                desc="Interested in learning how to make and edit graphics "
-              >
-                <ul className="list-inline social-links">
-                  <li className="list-inline-item">
-                    <a href="!#">
-                      <i className="fa fa-facebook" />
-                    </a>
-                  </li>
-                  <li className="list-inline-item">
-                    <a href="!#">
-                      <i className="fa fa-twitter" />
-                    </a>
-                  </li>
-                  <li className="list-inline-item">
-                    <a href="!#">
-                      <i className="fa fa-dribbble" />
-                    </a>
-                  </li>
-                  <li className="list-inline-item">
-                    <a href="!#">
-                      <i className="fa fa-behance" />
-                    </a>
-                  </li>
-                </ul>
-              </Card>
-              <Card
-                imgSrc="/assets/img/officers/mohsin.jpg"
-                meta="Algorithm Officer"
-                title="Mohsin Braer"
-                desc="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis
-                  distinctio voluptatibus placeat obcaecati necessitatibus, unde
-                  iste optio magni minima veniam!"
-              >
-                <ul className="list-inline social-links">
-                  <li className="list-inline-item">
-                    <a href="!#">
-                      <i className="fa fa-facebook" />
-                    </a>
-                  </li>
-                  <li className="list-inline-item">
-                    <a href="!#">
-                      <i className="fa fa-twitter" />
-                    </a>
-                  </li>
-                  <li className="list-inline-item">
-                    <a href="!#">
-                      <i className="fa fa-dribbble" />
-                    </a>
-                  </li>
-                  <li className="list-inline-item">
-                    <a href="!#">
-                      <i className="fa fa-behance" />
-                    </a>
-                  </li>
-                </ul>
-              </Card>
-              <Card
-                imgSrc="/assets/img/officers/kevin.jpg"
-                meta="Cyber Security Officer"
-                title="Kevin Nguyen"
-                desc="Is it a bird? Is it a plane? No it's Kevin Nguyen. "
-              >
-                <ul className="list-inline social-links">
-                  <li className="list-inline-item">
-                    <a href="!#">
-                      <i className="fa fa-facebook" />
-                    </a>
-                  </li>
-                  <li className="list-inline-item">
-                    <a href="!#">
-                      <i className="fa fa-twitter" />
-                    </a>
-                  </li>
-                  <li className="list-inline-item">
-                    <a href="!#">
-                      <i className="fa fa-dribbble" />
-                    </a>
-                  </li>
-                  <li className="list-inline-item">
-                    <a href="!#">
-                      <i className="fa fa-behance" />
-                    </a>
-                  </li>
-                </ul>
-              </Card>
-            </Carousel>
-          </div>
+          {officersContent}
         </Container>
         {/* end officers area */}
 
@@ -235,4 +103,4 @@ class About extends PureComponent {
   }
 }
 
-export default About
+export default getOfficers(About)

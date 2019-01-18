@@ -1,9 +1,10 @@
-import React, { Component } from "react"
+import React, { PureComponent } from "react"
 import GoogleAnalytics from "react-ga"
 import $ from "jquery"
 
 const CALENDAR_ID = process.env.REACT_APP_GOOGLE_CALENDAR_ID
 const PHOTOS_FOLDER_ID = process.env.REACT_APP_GOOGLE_DRIVE_PHOTO_FOLDER_ID
+const SHEETS_ID = process.env.REACT_APP_GOOGLE_SHEETS_ID
 const API_KEY = process.env.REACT_APP_GOOGLE_API_KEY
 GoogleAnalytics.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS_KEY)
 
@@ -19,6 +20,11 @@ var google_drive_url_params = {
   fields: "nextPageToken, files(id)",
 }
 
+var google_sheets_url_params = {
+  key: API_KEY,
+  fields: "values",
+}
+
 export const analyticsTracker = (WrappedComponent, options = {}) => {
   const trackPage = page => {
     GoogleAnalytics.set({
@@ -28,7 +34,7 @@ export const analyticsTracker = (WrappedComponent, options = {}) => {
     GoogleAnalytics.pageview(page)
   }
 
-  const HOC = class extends Component {
+  const HOC = class extends PureComponent {
     componentDidMount() {
       const page = this.props.location.pathname + this.props.location.search
       trackPage(page)
@@ -63,7 +69,7 @@ export const getEvents = (WrappedComponent, options = {}) => {
   if (options.fromNow) {
     google_calendar_url += "&timeMin=" + new Date().toISOString()
   }
-  const HOC = class extends Component {
+  const HOC = class extends PureComponent {
     state = {
       events: [],
       error: "",
@@ -107,7 +113,7 @@ export const getPhotos = WrappedComponent => {
     `https://www.googleapis.com/drive/v3/files?` +
     $.param(google_drive_url_params)
 
-  const HOC = class extends Component {
+  const HOC = class extends PureComponent {
     state = {
       photos: [],
       pageToken: "",
@@ -161,3 +167,81 @@ export const getPhotos = WrappedComponent => {
   }
   return HOC
 }
+
+export const getOfficers = WrappedComponent => {
+  let google_sheets_url =
+    `https://sheets.googleapis.com/v4/spreadsheets/${SHEETS_ID}/values/A:J?` +
+    $.param(google_sheets_url_params)
+
+  const HOC = class extends PureComponent {
+    state = {
+      officers: [],
+      isLoading: true,
+      error: false,
+    }
+    fetchPhotos() {
+      fetch(google_sheets_url)
+        .then(response => response.json())
+        .then(data => {
+          let newofficers = []
+          data.values.shift() // remove the header in google sheet
+          data.values.map(officer => {
+            return newofficers.push({
+              timestamp: officer[0],
+              name: officer[1] + " " + officer[2], // firstname + ' ' lastname
+              role: officer[3],
+              about: officer[5],
+              medias: [
+                { envelope: officer[4] },
+                { facebook: officer[6] || "#!" },
+                { linkedin: officer[7] || "#!" },
+                { github: officer[8] || "#!" },
+              ],
+              avatar: officer[9] || "/assets/img/officers/anonymous.png",
+            })
+          })
+          this.setState({
+            officers: [...newofficers],
+            isLoading: false,
+          })
+        })
+        .catch(error => this.setState({ error, isLoading: false }))
+    }
+    componentDidMount() {
+      this.fetchPhotos()
+    }
+    render() {
+      return (
+        <WrappedComponent
+          officers={this.state.officers}
+          isLoading={this.state.isLoading}
+          error={this.state.error}
+        />
+      )
+    }
+  }
+  return HOC
+}
+
+// let officers = []
+// fetch(google_sheets_url)
+//   .then(response => response.json())
+//   .then(data => {
+//     data.values.map(officer => {
+//       return officers.push({
+//         timestamp: officer[0],
+//         name: officer[1] + " " + officer[2], // firstname + ' ' lastname
+//         role: officer[3],
+//         about: officer[5],
+//         medias: {
+//           envelope: officer[4],
+//           facebook: officer[6] || "",
+//           linkedin: officer[7] || "",
+//           github: officer[8] || "",
+//         },
+//         avatar: officer[9],
+//       })
+//     })
+//     console.log(officers)
+//     return officers
+//   })
