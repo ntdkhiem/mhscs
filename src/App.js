@@ -1,4 +1,6 @@
 import React, { Component, Fragment } from "react"
+import { ToastContainer, toast } from "react-toastify"
+import "react-toastify/dist/ReactToastify.min.css"
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom"
 // import Pages to be used below
 import Home from "./Pages/Home/home"
@@ -18,10 +20,16 @@ import Footer from "./components/Footer"
 import "./scss/main.scss"
 
 class App extends Component {
+  componentDidMount() {
+    toast.warn("🔨 The website is currently in development mode!", {
+      position: toast.POSITION.TOP_CENTER,
+    })
+  }
   render() {
     return (
       <Router>
         <Fragment>
+          <ToastContainer autoClose={false} />
           <header id="header">
             <div className="header-top">
               <div className="container">
@@ -29,7 +37,7 @@ class App extends Component {
                   <div className="col-lg-6 col-sm-6 col-8 header-top-left no-padding">
                     <ul>
                       <li>
-                        <a className="icon" href="!#">
+                        <a className="icon" href="#!">
                           <i className="fa fa-slack" />
                         </a>
                       </li>
@@ -40,9 +48,11 @@ class App extends Component {
                       <span className="fa fa-phone" />
                       <span className="text">+953 012 3654 896</span>
                     </a>
-                    <a href="!#">
+                    <a href="mailto:computerclubmalden@gmail.com">
                       <span className="fa fa-envelope" />
-                      <span className="text pl-1">mhscclub@gmail.com</span>
+                      <span className="text pl-1">
+                        computerclubmalden@gmail.com
+                      </span>
                     </a>
                   </div>
                 </div>
