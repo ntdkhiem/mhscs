@@ -17,7 +17,7 @@ const Card = props => {
         </div>
       </div>
       <div className="details">
-        <a href="!#">
+        <a href="#!">
           <h4>{title}</h4>
         </a>
         <p>{desc}</p>

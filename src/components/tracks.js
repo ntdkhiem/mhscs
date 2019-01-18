@@ -7,7 +7,7 @@ const TracksList = () => {
   return (
     <Container
       title="Popular Tracks we offer"
-      desc="There is a moment in the life of any aspiring."
+      desc="These are tracks that we will cover."
       classes="tracks-area section-gap"
     >
       <div className="row">
@@ -16,7 +16,7 @@ const TracksList = () => {
             imgSrc="/assets/img/tracks/cyber.jpg"
             meta="Kevin Nguyen"
             title="Cyber Security"
-            desc="The goal of this track is to help you understand how cyber attacks work and how to defend yourself by do and think as a hacker."
+            desc="The goal of this course is to help you understand how Cyber Intrusions Function, and how to defend yourself against these attacks. Think as a hacker yourself!"
           />
           <Card
             imgSrc="/assets/img/tracks/algorithms.jpg"

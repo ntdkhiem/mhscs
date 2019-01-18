@@ -45,7 +45,7 @@ const Contact = () => {
                   <span className="lnr lnr-envelope" />
                 </div>
                 <div className="contact-details">
-                  <h5>mhscclub@gmail.com</h5>
+                  <h5>computerclubmalden@gmail.com</h5>
                   <p>Send us your query anytime!</p>
                 </div>
               </div>

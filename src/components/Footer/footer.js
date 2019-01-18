@@ -59,7 +59,7 @@ const Footer = () => {
               <h4>Quick Links</h4>
               <ul>
                 <li>
-                  <a href="!#">Members</a>
+                  <a href="#!">Members</a>
                 </li>
                 <li>
                   <Link to="/gallery">Gallery</Link>
@@ -68,7 +68,7 @@ const Footer = () => {
                   <Link to="/calendar">Calendar</Link>
                 </li>
                 <li>
-                  <a href="!#">Club's Policy</a>
+                  <a href="#!">Club's Policy</a>
                 </li>
                 <li>
                   <Link to="/terms">Terms of Service</Link>
@@ -92,7 +92,7 @@ const Footer = () => {
             </span>
           </p>
           <div className="col-lg-6 col-sm-12 footer-social">
-            <a href="!#">
+            <a href="#!">
               <i className="fa fa-slack" />
             </a>
           </div>
