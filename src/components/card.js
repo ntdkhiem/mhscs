@@ -20,7 +20,7 @@ const Card = props => {
         <a href="#!">
           <h4>{title}</h4>
         </a>
-        <p>{desc}</p>
+        <p className="text-dark">{desc}</p>
         {props.children}
       </div>
     </div>

@@ -20,9 +20,10 @@ const Footer = () => {
             <div className="single-footer-widget">
               <h4>MHS COMPUTER CULB</h4>
               <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Consectetur tempora facilis corrupti ab voluptas perspiciatis
-                repudiandae corporis nulla. Consequuntur, facere?
+                The Computer Club is dedicated to exposing students to the
+                computer programming by providing students the opportunity to be
+                involved in STEM activities focused on technology including but
+                not limited to algorithmic and computational thinking.
               </p>
               <h4 className="mt-5 mb-3">Support us</h4>
               <form
