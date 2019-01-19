@@ -36,9 +36,9 @@ class Home extends PureComponent {
                   </p>
                   <h1 className="text-uppercase">Empowered by Innovation</h1>
                   <p className="pt-10 pb-10">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Excepturi error illo numquam voluptas sapiente tempora
-                    ducimus totam eius neque atque?
+                    Want to become a graphic designer or skillful programmer?
+                    join the club and experience great things with many great
+                    and popular tools used by computer programmers.
                   </p>
                   <a href="#feature" className="primary-btn text-uppercase">
                     Explore More
