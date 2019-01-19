@@ -36,9 +36,9 @@ class Home extends PureComponent {
                   </p>
                   <h1 className="text-uppercase">Empowered by Innovation</h1>
                   <p className="pt-10 pb-10">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Excepturi error illo numquam voluptas sapiente tempora
-                    ducimus totam eius neque atque?
+                    Want to become a graphic designer or skillful programmer?
+                    join the club and experience great things with many great
+                    and popular tools used by computer programmers.
                   </p>
                   <a href="#feature" className="primary-btn text-uppercase">
                     Explore More
@@ -67,7 +67,7 @@ class Home extends PureComponent {
           <div className="overlay overlay-bg" />
           <div className="container">
             <div className="row justify-content-between align-items-center">
-              <div className="col-lg-6 col-md-6 search-course-left">
+              <div className="col-lg-6 col-md-6 search-course-left text-white">
                 <h1 className="text-white">Who should join us</h1>
                 <p>
                   If you are interested in learning more about the endless
@@ -78,10 +78,7 @@ class Home extends PureComponent {
                   <div className="col single-detials">
                     <span className="lnr lnr-graduation-hat" />
                     <h4>Curiosity Require</h4>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Quia, sint?
-                    </p>
+                    <p>Even though its not true but why not?</p>
                   </div>
                   <div className="col single-detials">
                     <span className="lnr lnr-license" />
