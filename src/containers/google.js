@@ -10,6 +10,8 @@ GoogleAnalytics.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS_KEY)
 
 var google_calendar_url_params = {
   key: API_KEY,
+  showDeleted: false,
+  singleEvents: true,
   fields: "items(start, end, summary, description, htmlLink, id)",
 }
 var google_drive_url_params = {
@@ -222,26 +224,3 @@ export const getOfficers = WrappedComponent => {
   }
   return HOC
 }
-
-// let officers = []
-// fetch(google_sheets_url)
-//   .then(response => response.json())
-//   .then(data => {
-//     data.values.map(officer => {
-//       return officers.push({
-//         timestamp: officer[0],
-//         name: officer[1] + " " + officer[2], // firstname + ' ' lastname
-//         role: officer[3],
-//         about: officer[5],
-//         medias: {
-//           envelope: officer[4],
-//           facebook: officer[6] || "",
-//           linkedin: officer[7] || "",
-//           github: officer[8] || "",
-//         },
-//         avatar: officer[9],
-//       })
-//     })
-//     console.log(officers)
-//     return officers
-//   })
