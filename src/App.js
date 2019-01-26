@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react"
+import React, { PureComponent, Fragment } from "react"
 import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.min.css"
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom"
@@ -19,7 +19,7 @@ import Footer from "./components/Footer"
 
 import "./scss/main.scss"
 
-class App extends Component {
+class App extends PureComponent {
   componentDidMount() {
     toast.warn("🔨 The website is currently in development mode!", {
       position: toast.POSITION.TOP_CENTER,
