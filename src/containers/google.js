@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react"
+import React, { Component, PureComponent } from "react"
 import GoogleAnalytics from "react-ga"
 import $ from "jquery"
 
@@ -77,7 +77,7 @@ export const getEvents = (WrappedComponent, options = {}) => {
       error: "",
       isLoading: true,
     }
-    componentDidMount() {
+    fetchEvents() {
       fetch(google_calendar_url)
         .then(response => response.json())
         .then(data => {
@@ -95,6 +95,9 @@ export const getEvents = (WrappedComponent, options = {}) => {
           this.setState({ events, isLoading: false })
         })
         .catch(error => this.setState({ error, isLoading: false }))
+    }
+    componentDidMount() {
+      this.fetchEvents()
     }
     render() {
       return (
@@ -115,7 +118,7 @@ export const getPhotos = WrappedComponent => {
     `https://www.googleapis.com/drive/v3/files?` +
     $.param(google_drive_url_params)
 
-  const HOC = class extends PureComponent {
+  const HOC = class extends Component {
     state = {
       photos: [],
       pageToken: "",
@@ -129,7 +132,7 @@ export const getPhotos = WrappedComponent => {
       fetch(google_drive_url)
         .then(response => response.json())
         .then(data => {
-          const photos = this.state.photos
+          let photos = this.state.photos
           let newPhotos = []
           data.files.map(file => {
             return newPhotos.push({
@@ -145,6 +148,9 @@ export const getPhotos = WrappedComponent => {
             photos: [...photos, ...newPhotos],
             isLoading: false,
           })
+          google_drive_url =
+            `https://www.googleapis.com/drive/v3/files?` +
+            $.param(google_drive_url_params)
         })
         .catch(error => this.setState({ error, isLoading: false }))
     }
