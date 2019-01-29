@@ -202,7 +202,7 @@ export const getOfficers = WrappedComponent => {
               medias: [
                 { envelope: officer[4] },
                 { facebook: officer[6] || "#!" },
-                { linkedin: officer[7] || "#!" },
+                { instagram: officer[7] || "#!" },
                 { github: officer[8] || "#!" },
               ],
               avatar: officer[9] || "/assets/img/officers/anonymous.png",
