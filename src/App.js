@@ -1,5 +1,4 @@
 import React, { PureComponent, Fragment } from "react"
-import "react-toastify/dist/ReactToastify.min.css"
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom"
 // import Pages to be used below
 import Home from "./Pages/Home/home"
