@@ -87,7 +87,7 @@ const Footer = () => {
         </div>
         <div className="footer-bottom row align-items-center justify-content-between">
           <p className="footer-text m-0 col-lg-6 col-md-12">
-            Copyright &copy; 2019 All rights reserved | template by Colorlib
+            Copyright &copy; 2019 All rights reserved | template by Colorlib | coded by Kevin Nguyen
           </p>
           <div className="col-lg-6 col-sm-12 footer-social">
             <a href="#!">
