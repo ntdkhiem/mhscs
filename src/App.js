@@ -1,5 +1,4 @@
 import React, { PureComponent, Fragment } from "react"
-import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.min.css"
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom"
 // import Pages to be used below
@@ -20,16 +19,10 @@ import Footer from "./components/Footer"
 import "./scss/main.scss"
 
 class App extends PureComponent {
-  componentDidMount() {
-    toast.warn("🔨 The website is currently in development mode!", {
-      position: toast.POSITION.TOP_CENTER,
-    })
-  }
   render() {
     return (
       <Router>
         <Fragment>
-          <ToastContainer autoClose={false} />
           <header id="header">
             <div className="header-top">
               <div className="container">
@@ -44,10 +37,6 @@ class App extends PureComponent {
                     </ul>
                   </div>
                   <div className="col-lg-6 col-sm-6 col-4 header-top-right no-padding">
-                    <a href="tel:+953 012 3654 896">
-                      <span className="fa fa-phone" />
-                      <span className="text">+953 012 3654 896</span>
-                    </a>
                     <a href="mailto:computerclubmalden@gmail.com">
                       <span className="fa fa-envelope" />
                       <span className="text pl-1">
@@ -114,5 +103,4 @@ class App extends PureComponent {
     )
   }
 }
-
 export default App
