@@ -34,7 +34,10 @@ class Home extends PureComponent {
                   <p className="text-white text-uppercase">
                     Welcome to <b>Malden High School Computer Club</b>
                   </p>
-                  <h1 className="text-uppercase">Empowered by Innovation</h1>
+                  <h1 className="text-uppercase">
+                    Empowered by{" "}
+                    <span className="text-flicker-in-glow">Innovation</span>
+                  </h1>
                   <p className="pt-10 pb-10">
                     Want to become a graphic designer or skillful programmer?
                     join the club and experience great things with many great

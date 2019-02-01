@@ -13,7 +13,7 @@ const MemberCTA = () => {
               for the future!
             </p>
             <a
-              className="primary-btn wh"
+              className="primary-btn wh heartbeat"
               href="https://goo.gl/forms/RlKUKIS2UjjrRxFT2"
               target="_blank"
               rel="noopener noreferrer"
