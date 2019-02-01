@@ -1,6 +1,5 @@
 import React, { PureComponent } from "react"
 import { Helmet } from "react-helmet"
-import Loader from "react-loaders"
 import moment from "moment"
 import BigCalendar from "react-big-calendar"
 import "react-big-calendar/lib/css/react-big-calendar.css"
@@ -33,9 +32,13 @@ class Events extends PureComponent {
     const { events, error, isLoading } = this.props
     let calendarArea
     if (error) {
-      calendarArea = <div>Error: please contact us!! ({error.message})</div>
+      calendarArea = (
+        <div className="text-center text-danger">
+          Error: please contact us!! ({error.message})
+        </div>
+      )
     } else if (isLoading) {
-      calendarArea = <Loader type="pacman" active={isLoading} />
+      calendarArea = <div className="text-center">Loading...</div>
     } else {
       calendarArea = (
         <BigCalendar

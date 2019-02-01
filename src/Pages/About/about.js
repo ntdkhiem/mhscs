@@ -1,6 +1,5 @@
 import React, { PureComponent } from "react"
 import { Helmet } from "react-helmet"
-import Loader from "react-loaders"
 
 import Banner from "../../components/banner"
 import Feature from "../../components/Feature"
@@ -18,9 +17,13 @@ class About extends PureComponent {
     const { officers, isLoading, error } = this.props
     let officersContent
     if (error) {
-      officersContent = <div>Error: please contact us!! ({error.message})</div>
+      officersContent = (
+        <div className="text-danger">
+          Error: please contact us!! ({error.message})
+        </div>
+      )
     } else if (isLoading) {
-      officersContent = <Loader type="pacman" active={isLoading} />
+      officersContent = <div>Loading..</div>
     } else {
       officersContent = (
         <React.Fragment>

@@ -31,17 +31,6 @@ const Contact = () => {
               </div>
               <div className="single-contact-address d-flex flex-row">
                 <div className="icon">
-                  <span className="lnr lnr-phone-handset" />
-                </div>
-                <div className="contact-details">
-                  <h5>00 (958) 9865 562</h5>
-                  <p>
-                    Every <b>Wednesday</b>
-                  </p>
-                </div>
-              </div>
-              <div className="single-contact-address d-flex flex-row">
-                <div className="icon">
                   <span className="lnr lnr-envelope" />
                 </div>
                 <div className="contact-details">

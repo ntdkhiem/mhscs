@@ -1,7 +1,6 @@
 import React, { PureComponent } from "react"
 import { Helmet } from "react-helmet"
 import Image from "react-image-resizer"
-import Loader from "react-loaders"
 
 import Banner from "../../components/banner"
 import { getPhotos } from "../../containers/google"
@@ -11,9 +10,13 @@ class Gallery extends PureComponent {
     const { photos, pageToken, isLoading, error, morePhotos } = this.props
     let galleryContent
     if (error) {
-      galleryContent = <div>Error: please contact us!! ({error.message})</div>
+      galleryContent = (
+        <div className="text-danger">
+          Error: please contact us!! ({error.message})
+        </div>
+      )
     } else if (isLoading) {
-      galleryContent = <Loader type="pacman" active={isLoading} />
+      galleryContent = <div>loading...</div>
     } else {
       galleryContent = (
         <React.Fragment>
