@@ -1,31 +1,4 @@
 $(document).ready(function() {
-  "use strict"
-
-  var window_width = $(window).width(),
-    window_height = window.innerHeight,
-    header_height = $(".default-header").height(),
-    header_height_static = $(".site-header.static").outerHeight(),
-    fitscreen = window_height - header_height
-
-  $(".fitscreen").css("height", fitscreen)
-
-  //------- Superfist nav menu  js --------//
-
-  $(".nav-menu").superfish({
-    animation: {
-      opacity: "show",
-    },
-    speed: 400,
-  })
-
-  //------- Tabs Js --------//
-  if (document.getElementById("horizontalTab")) {
-    $("#horizontalTab").jqTabs({
-      direction: "horizontal",
-      duration: 200,
-    })
-  }
-
   //------- Mobile Nav  js --------//
 
   if ($("#nav-menu-container").length) {
