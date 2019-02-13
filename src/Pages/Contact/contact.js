@@ -12,7 +12,7 @@ const Contact = () => {
       </Helmet>
 
       {/* <!-- start banner Area --> */}
-      <Banner page="Gallery" link="/gallery" />
+      <Banner page="Contact" link="/contact" />
       {/* <!-- End banner Area --> */}
 
       {/* start contact area */}

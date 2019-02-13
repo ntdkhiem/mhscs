@@ -79,7 +79,7 @@ class Form extends Component {
           />
         </div>
         <button type="submit" className="genric-btn primary mt-10 btn-block">
-          Submit
+          Send
         </button>
       </form>
     )
