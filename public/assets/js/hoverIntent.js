@@ -31,14 +31,14 @@
  */
 
 ;(function(factory) {
-    'use strict';
+    
     if (typeof define === 'function' && define.amd) {
         define(['jquery'], factory);
     } else if (jQuery && !jQuery.fn.hoverIntent) {
         factory(jQuery);
     }
 })(function($) {
-    'use strict';
+    
 
     // default configuration values
     var _cfg = {
