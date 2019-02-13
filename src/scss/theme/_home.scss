@@ -73,7 +73,7 @@
 }
 
 .primary-btn.squire {
-  border-radius: 0px !important;
+  border-radius: 0 !important;
   border: 1px solid transparent;
   &:hover {
     border: 1px solid $white;
@@ -171,7 +171,7 @@
   text-align: center;
   .title {
     background: rgba(#fff, 0.15);
-    padding: 20px 0px;
+    padding: 20px 0;
     @include transition();
     h4 {
       color: $white;
@@ -180,7 +180,7 @@
   .desc-wrap {
     padding: 20px;
     background-color: rgb(255, 255, 255);
-    box-shadow: 0px 10px 30px 0px rgba(153, 153, 153, 0.1);
+    box-shadow: 0 10px 30px 0 rgba(153, 153, 153, 0.1);
     a {
       font-size: 14px;
       font-weight: 600;
@@ -253,14 +253,14 @@
     margin-top: -26px;
     z-index: 2;
     position: inherit;
-    padding: 0px 10px;
+    padding: 0 10px;
     p {
       font-size: 12px;
       font-weight: 300;
       color: $white;
-      margin-bottom: 0px;
+      margin-bottom: 0;
       .lnr {
-        margin: 0px 5px;
+        margin: 0 5px;
       }
     }
     h4 {
@@ -270,7 +270,7 @@
   .details {
     h4 {
       @include transition();
-      margin: 20px 0px;
+      margin: 20px 0;
       &:hover {
         color: $primary-color !important;
       }
@@ -324,11 +324,11 @@
         font-size: 30px;
       }
       h4 {
-        margin: 20px 0px;
+        margin: 20px 0;
         color: $white;
       }
       p {
-        margin-bottom: 0px;
+        margin-bottom: 0;
       }
       @media (max-width: 991px) and (min-width: 768px) {
         h4 {
@@ -354,7 +354,7 @@
   }
   p {
     max-width: 670px;
-    margin: 20px 0px;
+    margin: 20px 0;
     @media (max-width: 576px) {
       padding: 0% 5%;
     }
@@ -366,7 +366,7 @@
 
 .cta-two-area {
   background: $primary-color;
-  padding: 90px 0px;
+  padding: 90px 0;
   .cta-left {
     text-align: left;
     h1 {
@@ -446,7 +446,7 @@
 
 .link-nav {
   margin-top: 10px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .about-banner {
@@ -456,7 +456,7 @@
 
 .about-content {
   margin-top: 110px;
-  padding: 90px 0px;
+  padding: 90px 0;
   text-align: center;
   @media (max-width: 767px) {
     margin-top: 70px;
@@ -471,7 +471,7 @@
     font-size: 14px;
   }
   .lnr {
-    margin: 0px 10px;
+    margin: 0 10px;
     font-weight: 600;
   }
 }
