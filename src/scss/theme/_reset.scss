@@ -1,5 +1,5 @@
 /* =================================== */
-/*  Basic Style 
+/*  Basic Style
 /* =================================== */
 
 ::-moz-selection {
@@ -162,7 +162,7 @@ h6,
 
 td,
 th {
-  border-radius: 0px;
+  border-radius: 0;
 }
 /**
  * For modern browsers
@@ -318,10 +318,10 @@ th {
 }
 // margin-bottom
 .mb-0 {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 .mb-0-i {
-  margin-bottom: 0px !important;
+  margin-bottom: 0 !important;
 }
 .mb-5 {
   margin-bottom: 5px;
@@ -364,7 +364,7 @@ th {
 }
 // padding-top
 .pt-0 {
-  padding-top: 0px;
+  padding-top: 0;
 }
 .pt-10 {
   padding-top: 10px;
@@ -413,7 +413,7 @@ th {
 }
 // padding-bottom
 .pb-0 {
-  padding-bottom: 0px;
+  padding-bottom: 0;
 }
 .pb-10 {
   padding-bottom: 10px;

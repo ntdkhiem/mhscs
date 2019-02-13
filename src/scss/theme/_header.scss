@@ -190,7 +190,7 @@
 
 /* Nav Meu Styling */
 .nav-menu a {
-  padding: 0 8px 0px 8px;
+  padding: 0 8px;
   text-decoration: none;
   display: inline-block;
   color: $white;
@@ -209,9 +209,9 @@
 }
 
 .nav-menu ul {
-  margin: 24px 0 0 0;
+  margin: 24px 0 0;
   padding: 10px;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  box-shadow: 0 0 30px rgba(127, 137, 161, 0.25);
   background: #fff;
 }
 

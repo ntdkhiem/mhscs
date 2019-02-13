@@ -61,7 +61,7 @@
         text-align: center;
         @include transition();
         @media(max-width: 504px) {
-            padding: .9em .9em;
+            padding: .9em;
             font-size: 10px;
         }
     }
@@ -98,7 +98,7 @@
     }
     @media(max-width:413px){
         .comment-wrap{
-            padding:0px !important; 
+            padding:0 !important;
         }
         
     }
@@ -121,7 +121,7 @@
         }
     }
     .comments-area {
-        padding: 0px 20px;
+        padding: 0 20px;
         margin-top: 50px;
         background: transparent!important;
         border: none!important;
@@ -139,7 +139,7 @@
         .comment-list {
             padding-bottom: 30px;
             &:last-child {
-                padding-bottom: 0px;
+                padding-bottom: 0;
             }
             &.left-padding {
                 padding-left: 25px;
@@ -178,7 +178,7 @@
         }
         .comment {
             color: #777777;
-            margin-bottom: 0px;
+            margin-bottom: 0;
         }
         .btn-reply {
             background-color: #fcfaff;
@@ -213,7 +213,7 @@
         color:$white;
         font-size:14px;
         font-weight:600;
-        padding:20px 0px;
+        padding:20px 0;
         span{
             font-size:18px;
             color:$primary-color;
@@ -221,7 +221,7 @@
         @media(max-width:991px){
             margin-bottom:20px;
         }
-    }   
+    }
 
     .single-reviews{
         h5{
@@ -230,7 +230,7 @@
                 margin-left:10px;
             }
         }
-    } 
+    }
 }
 
 .right-contents {
@@ -245,7 +245,7 @@
                 font-size: 14px;
                 font-weight: 400;
                 p {
-                    margin-bottom: 0px;
+                    margin-bottom: 0;
                 }
             }
             .or {
