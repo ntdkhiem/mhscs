@@ -33,13 +33,6 @@ const Review = () => {
             <div className="single-review item">
               <div className="title justify-content-start d-flex">
                 <h4>Kevin Nguyen</h4>
-                <div className="star">
-                  <span className="fa fa-star checked" />
-                  <span className="fa fa-star checked" />
-                  <span className="fa fa-star checked" />
-                  <span className="fa fa-star checked" />
-                  <span className="fa fa-star checked" />
-                </div>
               </div>
               <p>
                 I really enjoy participate into this club because members are
@@ -49,14 +42,7 @@ const Review = () => {
             </div>
             <div className="single-review item">
               <div className="title justify-content-start d-flex">
-                <h4>Felix Li</h4>
-                <div className="star">
-                  <span className="fa fa-star checked" />
-                  <span className="fa fa-star checked" />
-                  <span className="fa fa-star checked" />
-                  <span className="fa fa-star checked" />
-                  <span className="fa fa-star checked" />
-                </div>
+                <h4>Mohsin Braer</h4>
               </div>
               <p>
                 The Computer Club is great for everyone and I would like to

@@ -3,8 +3,8 @@ import OwlCarousel from "react-owl-carousel"
 import "owl.carousel/dist/assets/owl.carousel.css"
 import "owl.carousel/dist/assets/owl.theme.default.css"
 let defaultOptions = {
-  items: 4,
-  margin: 30,
+  items: 3,
+  margin: 50,
   loop: true,
   dots: true,
   autoplayHoverPause: true,
@@ -21,7 +21,7 @@ let defaultOptions = {
       items: 2,
     },
     992: {
-      items: 4,
+      items: 3,
     },
   },
 }

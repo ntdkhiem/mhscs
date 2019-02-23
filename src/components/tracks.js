@@ -7,20 +7,20 @@ const TracksList = () => {
   return (
     <Container
       title="Popular Tracks we offer"
-      desc="These are tracks that we will cover."
+      desc="These are tracks that we will cover for now. Any new track will be update automatically."
       classes="tracks-area section-gap"
     >
       <div className="row">
         <Carousel>
           <Card
             imgSrc="/assets/img/tracks/cyber.jpg"
-            meta="Kevin Nguyen"
+            meta="Kevin Nguyen, Jack Williams"
             title="Cyber Security"
             desc="The goal of this course is to help you understand how Cyber Intrusions Function, and how to defend yourself against these attacks. Think as a hacker yourself!"
           />
           <Card
             imgSrc="/assets/img/tracks/algorithms.jpg"
-            meta="Mohsin Braer"
+            meta="Mohsin Braer, Jacky Luong"
             title="Algorithms"
             desc="Explore a concept essential to programming for making your computer program as effecient as possible"
           />
@@ -29,12 +29,6 @@ const TracksList = () => {
             meta="Felix Li"
             title="Graphic"
             desc="The goal of the Graphics track is to perfect skills of effective design and user interfacing through software such as Photoshop and Illustrator."
-          />
-          <Card
-            imgSrc="/assets/img/tracks/hardware.jpg"
-            meta="Jack Williams"
-            title="Hardware"
-            desc="This track will focus on the main components of a computer, as well as address how a mix of hardware and software is used to communicate between computers."
           />
         </Carousel>
       </div>
