@@ -60,16 +60,10 @@ const Footer = () => {
               <h4>Quick Links</h4>
               <ul>
                 <li>
-                  <a href="#!">Members</a>
-                </li>
-                <li>
                   <Link to="/gallery">Gallery</Link>
                 </li>
                 <li>
                   <Link to="/calendar">Calendar</Link>
-                </li>
-                <li>
-                  <a href="#!">Club's Policy</a>
                 </li>
                 <li>
                   <Link to="/terms">Terms of Service</Link>
@@ -87,7 +81,8 @@ const Footer = () => {
         </div>
         <div className="footer-bottom row align-items-center justify-content-between">
           <p className="footer-text m-0 col-lg-6 col-md-12">
-            Copyright &copy; 2019 All rights reserved | template by Colorlib | by Kevin Nguyen
+            Copyright &copy; 2019 All rights reserved | template by Colorlib |
+            by Kevin Nguyen
           </p>
           <div className="col-lg-6 col-sm-12 footer-social">
             <a href="#!">
