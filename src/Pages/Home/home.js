@@ -40,7 +40,7 @@ class Home extends PureComponent {
                   </h1>
                   <p className="pt-10 pb-10">
                     Want to become a graphic designer or skillful programmer?
-                    join the club and experience great things with many great
+                    Join the club and experience great things with many great
                     and popular tools used by computer programmers.
                   </p>
                   <a href="#feature" className="primary-btn text-uppercase">
@@ -75,7 +75,7 @@ class Home extends PureComponent {
                 <p>
                   If you are interested in learning more about the endless
                   opportunities the field of Computer Science and Technology
-                  have to offer, while also participating in local
+                  have to offer, while also participating in local hackathons.
                 </p>
                 <div className="row details-content">
                   <div className="col single-detials">

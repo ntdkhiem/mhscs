@@ -2,7 +2,6 @@ import React, { PureComponent } from "react"
 import { Helmet } from "react-helmet"
 
 import Banner from "../../components/banner"
-import Feature from "../../components/Feature"
 import Goal from "../../components/goal"
 import Container from "../../components/container"
 import Carousel from "../../components/carousel"
@@ -64,17 +63,10 @@ class About extends PureComponent {
         {/* <!-- start banner Area --> */}
         <Banner page="About Us" link="/home" />
         {/* <!-- End banner Area --> */}
-
         <div className="p-1" />
-
-        {/* start feature Area */}
-        <Feature />
-        {/* end feature Area */}
-
         {/* start our's goal area */}
         <Goal layout="right" />
         {/* end our's goal area */}
-
         {/* start officers area */}
         <Container
           title="Who We Are"
@@ -93,11 +85,9 @@ class About extends PureComponent {
           {officersContent}
         </Container>
         {/* end officers area */}
-
         {/* start member CTA area */}
         <MemberCTA />
         {/* end member CTA area */}
-
         {/* start review area */}
         <Review />
         {/* end review area */}
