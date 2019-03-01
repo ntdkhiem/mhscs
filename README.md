@@ -18,3 +18,5 @@ These are all things that I used to make this website:
 - [ ] Convert to [Gatsby](https://www.gatsbyjs.org/) and integrate with [Netlify CMS](https://www.netlifycms.org/)
 - [ ] Integrate [Redux](https://redux.js.org/) to React for state management. 
 - [ ] Paypal redirection
+
+For [Malden Computer Club](https://github.com/mhscc)
