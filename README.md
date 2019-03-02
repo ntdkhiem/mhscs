@@ -12,8 +12,11 @@ These are all things that I used to make this website:
 ### NOTE: 
 - The project is currently in development and organization is require so take note as the code isn't complete perfect (*no one is perfect as well as their code.*)
 - I replaced api keys in production so these keys are not available to launch (*you can generate your own in [google console](https://console.developer.google.com)*)
+- colorlib template usage
 
 ### TODO:
-in [Project](https://github.com/TopKeingt/mhscs/projects)
+- [ ] Convert to [Gatsby](https://www.gatsbyjs.org/) and integrate with [Netlify CMS](https://www.netlifycms.org/)
+- [ ] Integrate [Redux](https://redux.js.org/) to React for state management. 
+- [ ] Paypal redirection
 
-**Instruction on how to use it coming soon**
+For [Malden Computer Club](https://github.com/mhscc)
