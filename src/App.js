@@ -68,6 +68,15 @@ class App extends PureComponent {
                       <Link to="/events">Events</Link>
                     </li>
                     <li>
+                      <a
+                        href="https://github.com/mhscc"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Projects
+                      </a>
+                    </li>
+                    <li>
                       <Link to="/gallery">Gallery</Link>
                     </li>
                     <li>
