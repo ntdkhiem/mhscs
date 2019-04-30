@@ -1,4 +1,4 @@
-Malden High School Computer Club's source code
+Malden High School Computer Club's source code [![Codacy Badge](https://api.codacy.com/project/badge/Grade/0ce56fda3cd14151bd7506f1694fb1c5)](https://www.codacy.com/app/TopKeingt/mhscs?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=TopKeingt/mhscs&amp;utm_campaign=Badge_Grade)
 
 ### Features
 These are all things that I used to make this website:
