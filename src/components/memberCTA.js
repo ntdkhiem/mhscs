@@ -10,11 +10,11 @@ const MemberCTA = () => {
             <h1 className="text-white">Become a member</h1>
             <p>
               Join us and you can learn many new things and develop your skills
-              for the future!
+              for the future! (Malden High School Only!)
             </p>
             <a
               className="primary-btn wh heartbeat"
-              href="https://goo.gl/forms/RlKUKIS2UjjrRxFT2"
+              href="https://forms.gle/nKVGwWUJa9ZFVg9Y7"
               target="_blank"
               rel="noopener noreferrer"
             >
